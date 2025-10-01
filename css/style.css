@@ -17,13 +17,13 @@ header nav {
   display: flex;
   justify-content: center;
   gap: 30px;
-  background-color: #1b2ebf; /* Jellyfish pastel teal */
+  background-color: #295a75; /* Jellyfish pastel teal */
   padding: 15px 0;
-  border-bottom: 2px solid #4dd0e1; /* optional accent line */
+  border-bottom: 2px solid #295a75; /* optional accent line */
 }
 
 header nav a {
-  color: #004d40; /* Dark teal for contrast */
+  color: #295a75; /* Dark teal for contrast */
   text-decoration: none;
   font-weight: bold;
 }
@@ -43,9 +43,10 @@ header nav a:hover {
 
 /* Footer */
 footer {
-  background: #80deea; /* Jellyfish pastel teal */
+  background: #295a75; /* Jellyfish pastel teal */
   color: #1b2ebf; /* Dark teal text */
   padding: 20px 0;
   border-top: 2px solid #4dd0e1; /* optional accent line */
 }
+
 
