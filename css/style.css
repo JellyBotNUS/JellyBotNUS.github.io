@@ -33,16 +33,6 @@ header nav a:hover {
   color: #a3d5e0; /* Light accent on hover */
 }
 
-#section-1 {
-  background-image: url('images/backgroundimage.jpg'); /* path to your jellyfish image */
-  background-size: cover;        /* makes sure the image covers the entire section */
-  background-position: center;   /* centers the image */
-  background-repeat: no-repeat;  /* prevents tiling */
-  padding: 60px 20px;            /* add some spacing so text isn't at the edge */
-  color: #ffffff;                /* text color for readability */
-  border-radius: 10px;           /* optional: soft corners */
-  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* optional: subtle shadow for contrast */
-}
 
 /* Footer */
 footer {
@@ -69,6 +59,7 @@ footer {
   padding: 20px 0;
   border-top: 2px solid #1f4f61; /* subtle accent line */
 }
+
 
 
 
