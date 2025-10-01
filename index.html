@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jellybot</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Shoelace for components -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -38,11 +41,94 @@
     </div>
   </section>
 
+  <!-- Team Members -->
+  <section class="team">
+    <h2>Meet the Team</h2>
+    <div class="team-member-wrapper">
+      <team-member avatar="assets/afham.png" name="Afham" department="Mechanical Engineering" year="1993"></team-member>
+      <team-member avatar="assets/darrel.png" name="Darrel" department="Computer Engineering" year="1993"></team-member>
+      <team-member avatar="assets/navin.png" name="Navin" department="Electrical Engineering" year="1993"></team-member>
+      <team-member avatar="assets/wallace.png" name="Wallace" department="Biomedical Engineering" year="1993"></team-member>
+    </div>
+  </section>
+
+  <sl-divider></sl-divider>
+
+  <!-- Table of Contents -->
+  <section class="table-of-content">
+    <h2>Table of Contents</h2>
+    <sl-tree>
+      <sl-tree-item expanded>
+        <a href="#section-1">1. Section 1</a>
+        <sl-tree-item>
+          <a href="#sub-section-1a">1.1 Sub-section 1A</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#sub-section-1b">1.2 Sub-section 1B</a>
+        </sl-tree-item>
+      </sl-tree-item>
+      <sl-tree-item expanded>
+        <a href="#section-2">2. Section 2</a>
+        <sl-tree-item>
+          <a href="#sub-section-2a">2.1 Sub-section 2A</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#sub-section-2b">2.2 Sub-section 2B</a>
+        </sl-tree-item>
+      </sl-tree-item>
+      <sl-tree-item>
+        <a href="#references">References</a>
+      </sl-tree-item>
+    </sl-tree>
+  </section>
+
+  <sl-divider></sl-divider>
+
+  <!-- Sections -->
+  <section id="section-1">
+    <h2>Section 1</h2>
+    <p>Content for section 1...</p>
+
+    <div id="sub-section-1a">
+      <h3>Sub-section 1A</h3>
+      <p>Content for sub-section 1A...</p>
+    </div>
+    <div id="sub-section-1b">
+      <h3>Sub-section 1B</h3>
+      <p>Content for sub-section 1B...</p>
+    </div>
+  </section>
+
+  <section id="section-2">
+    <h2>Section 2</h2>
+    <p>Content for section 2...</p>
+
+    <div id="sub-section-2a">
+      <h3>Sub-section 2A</h3>
+      <p>Content for sub-section 2A...</p>
+    </div>
+    <div id="sub-section-2b">
+      <h3>Sub-section 2B</h3>
+      <p>Content for sub-section 2B...</p>
+    </div>
+  </section>
+
+  <!-- References -->
+  <section id="references">
+    <h2>References</h2>
+    <ul>
+      <li>Brody, J. E. (2007). Mental reserves keep brain agile.</li>
+      <li>Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008). Enhancing worker well-being.</li>
+    </ul>
+  </section>
+
   <!-- Footer -->
   <footer>
     <p>© 2025 Jellybot Project</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/script.js"></script>
+  <script type="module" src="components/team-member/team-member.js"></script>
 </body>
 </html>
