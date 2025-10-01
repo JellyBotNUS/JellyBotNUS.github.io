@@ -44,6 +44,30 @@ footer {
 
 
 /* Hero Section */ 
+.hero {
+  text-align: center;
+  background-image: url('images/jellyfish-bg.jpg'); /* path to your image */
+  background-size: cover;        /* makes the image cover the entire section */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;  /* prevents tiling */
+  color: white;                  /* text color for contrast */
+  padding: 100px 20px;           /* spacing above and below text */
+}
+.hero::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* dark overlay, adjust opacity */
+  z-index: 0;
+}
+.hero h1, .hero p {
+  position: relative; /* ensures text is above overlay */
+  z-index: 1;
+}
 .hero h1 { font-size: 3em; margin-bottom: 10px; } 
 .hero p { font-size: 1.2em; margin-bottom: 30px; } 
 
@@ -59,6 +83,7 @@ footer {
   padding: 20px 0;
   border-top: 2px solid #1f4f61; /* subtle accent line */
 }
+
 
 
 
