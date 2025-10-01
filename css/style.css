@@ -12,6 +12,14 @@ section, .table-of-content {
   margin: 40px auto;
 }
 
+.content-container {
+  max-width: 900px;      /* controls how wide the text can get */
+  margin: 0 auto;         /* centers the container horizontally */
+  padding: 0 20px;        /* adds some space on the sides */
+  text-align: left;       /* left-aligns the text inside the container */
+}
+
+
 /* Navigation styling */
 header nav {
   display: flex;
@@ -61,3 +69,4 @@ footer {
   color: #fff;
   padding: 20px 0;
 }
+
