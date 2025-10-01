@@ -1,76 +1,29 @@
-/* Center all content */
-body {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #e0f7fa; /* Light jellyfish/sea color */
-}
+/* Center all content */ 
+body { text-align: center; font-family: Arial, sans-serif; margin: 0; padding: 0; 
+     } 
 
-/* Center sections with max width */
-section, .table-of-content {
-  max-width: 900px;
-  margin: 40px auto;
-}
+/* Center sections with max width */ 
+section, .table-of-content { max-width: 900px; margin: 40px auto; 
+} 
+.content-container { 
+  max-width: 900px; /* controls how wide the text can get */ 
+  margin: 0 auto; /* centers the container horizontally */ 
+  padding: 0 20px; /* adds some space on the sides */ 
+  text-align: left; /* left-aligns the text inside the container */ 
+} 
 
-.content-container {
-  max-width: 900px;      /* controls how wide the text can get */
-  margin: 0 auto;         /* centers the container horizontally */
-  padding: 0 20px;        /* adds some space on the sides */
-  text-align: left;       /* left-aligns the text inside the container */
-}
+/* Navigation styling */ 
 
-/* Navigation styling */
-header nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  background-color: #80deea; /* Jellyfish pastel teal */
-  padding: 15px 0;
-  border-bottom: 2px solid #4dd0e1;
-}
+header nav { display: flex; justify-content: center; gap: 30px; background-color: #333; padding: 15px 0; } 
+header nav a { color: #fff; text-decoration: none; font-weight: bold; } 
+header nav a:hover { text-decoration: underline; } 
 
-header nav a {
-  color: #004d40; /* Dark teal for contrast */
-  text-decoration: none;
-  font-weight: bold;
-}
+/* Hero Section */ 
+.hero h1 { font-size: 3em; margin-bottom: 10px; } 
+.hero p { font-size: 1.2em; margin-bottom: 30px; } 
 
-header nav a:hover {
-  text-decoration: underline;
-}
+/* Features Section */ 
 
-/* Hero Section */
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  color: #006064; /* Deep teal/blue accent */
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  color: #004d40;
-}
-
-/* Features Section */
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.features div {
-  background: #b2ebf2; /* Soft jellyfish/light blue */
-  padding: 20px;
-  border-radius: 10px;
-  color: #004d40; /* Text color matching the theme */
-}
-
-/* Footer */
-footer {
-  background: #80deea; /* Jellyfish pastel teal */
-  color: #004d40; /* Dark teal text */
-  padding: 20px 0;
-  border-top: 2px solid #4dd0e1;
-}
+.features { display: flex; flex-direction: column; gap: 30px; } 
+.features div { background: #f0f0f0; padding: 20px; border-radius: 10px; } 
+/* Footer */ footer { background: #333; color: #fff; padding: 20px 0; }
