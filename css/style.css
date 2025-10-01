@@ -12,11 +12,25 @@ section, .table-of-content { max-width: 900px; margin: 40px auto;
   text-align: left; /* left-aligns the text inside the container */ 
 } 
 
-/* Navigation styling */ 
+/* Navigation styling */
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #80deea; /* Jellyfish pastel teal */
+  padding: 15px 0;
+  border-bottom: 2px solid #4dd0e1; /* optional accent line */
+}
 
-header nav { display: flex; justify-content: center; gap: 30px; background-color: #333; padding: 15px 0; } 
-header nav a { color: #fff; text-decoration: none; font-weight: bold; } 
-header nav a:hover { text-decoration: underline; } 
+header nav a {
+  color: #004d40; /* Dark teal for contrast */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
 
 /* Hero Section */ 
 .hero h1 { font-size: 3em; margin-bottom: 10px; } 
@@ -26,4 +40,11 @@ header nav a:hover { text-decoration: underline; }
 
 .features { display: flex; flex-direction: column; gap: 30px; } 
 .features div { background: #f0f0f0; padding: 20px; border-radius: 10px; } 
-/* Footer */ footer { background: #333; color: #fff; padding: 20px 0; }
+
+/* Footer */
+footer {
+  background: #80deea; /* Jellyfish pastel teal */
+  color: #004d40; /* Dark teal text */
+  padding: 20px 0;
+  border-top: 2px solid #4dd0e1; /* optional accent line */
+}
