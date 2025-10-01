@@ -8,6 +8,35 @@
   <!-- Shoelace for components -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <style>
+    /* Soft-left alignment container */
+    .content-container {
+      max-width: 900px; /* limits text width */
+      margin: 0 auto;   /* centers container horizontally */
+      padding: 0 20px;  /* side padding */
+      text-align: left; /* left-align text inside container */
+    }
+
+    .features div {
+      text-align: left; /* left-align feature boxes */
+    }
+
+    .hero {
+      text-align: center; /* keep hero section centered */
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -26,7 +55,7 @@
   </section>
 
   <!-- Features -->
-  <section class="features">
+  <section class="features content-container">
     <div>
       <h2>Durable Design</h2>
       <p>Built with PVC and waterproof housing for long-term operation.</p>
@@ -43,100 +72,82 @@
 
   <sl-divider></sl-divider>
 
-<!-- Table of Contents -->
-<section class="table-of-content">
-  <h2>Table of Contents</h2>
-  <sl-tree>
-    <sl-tree-item expanded>
-      <a href="#section-1">1. Background</a>
-    </sl-tree-item>
-    <sl-tree-item expanded>
-      <a href="#section-2">2. Section 2</a>
-      <sl-tree-item>
-        <a href="#sub-section-2a">2.1 Sub-section 2A</a>
+  <!-- Table of Contents -->
+  <section class="table-of-content content-container">
+    <h2>Table of Contents</h2>
+    <sl-tree>
+      <sl-tree-item expanded>
+        <a href="#section-1">1. Background</a>
+      </sl-tree-item>
+      <sl-tree-item expanded>
+        <a href="#section-2">2. Section 2</a>
+        <sl-tree-item>
+          <a href="#sub-section-2a">2.1 Sub-section 2A</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#sub-section-2b">2.2 Sub-section 2B</a>
+        </sl-tree-item>
       </sl-tree-item>
       <sl-tree-item>
-        <a href="#sub-section-2b">2.2 Sub-section 2B</a>
+        <a href="#references">References</a>
       </sl-tree-item>
-    </sl-tree-item>
-    <sl-tree-item>
-      <a href="#references">References</a>
-    </sl-tree-item>
-  </sl-tree>
-</section>
-
+    </sl-tree>
+  </section>
 
   <sl-divider></sl-divider>
 
   <!-- Sections -->
-<section id="section-1">
-  <h2>1. Background</h2>
+  <div class="content-container">
+    <section id="section-1">
+      <h2>1. Background</h2>
 
-  <p>
-    <strong>Importance of coral reefs:</strong><br>
-    Coral reefs are the most species-rich ecosystems in the ocean. Although they occur across more than one hundred countries and occupy well under 1% of the seafloor, their intricate, three-dimensional frameworks provide habitat, nursery grounds, and feeding areas for roughly a quarter of described marine species. 
-    This biological richness translates into substantial human benefits: reef fisheries and tourism support livelihoods, reef crests dissipate wave energy and reduce flooding, and bioprospecting has yielded medically relevant compounds. 
-    Recent global assessments estimate the combined value of these services at around US$2.7 trillion per year (GCRMN, 2020).
-  </p>
+      <p><strong>Importance of coral reefs:</strong><br>
+      Coral reefs are the most species-rich ecosystems in the ocean. Although they occur across more than one hundred countries and occupy well under 1% of the seafloor, their intricate, three-dimensional frameworks provide habitat, nursery grounds, and feeding areas for roughly a quarter of described marine species. 
+      This biological richness translates into substantial human benefits: reef fisheries and tourism support livelihoods, reef crests dissipate wave energy and reduce flooding, and bioprospecting has yielded medically relevant compounds. 
+      Recent global assessments estimate the combined value of these services at around US$2.7 trillion per year (GCRMN, 2020).</p>
 
-  <p>
-    <strong>Status and pressures:</strong><br>
-    Reefs are also among the ecosystems most exposed to human pressures. The IPCC (2019) identifies coral reefs as the marine system at highest risk from climate change—particularly marine heatwaves and stronger storms—compounded by ocean acidification. 
-    Local stressors exacerbate these impacts: nutrient and sediment runoff, marine pollution, and overfishing (including destructive methods) all erode reef condition and resilience.
-  </p>
+      <p><strong>Status and pressures:</strong><br>
+      Reefs are also among the ecosystems most exposed to human pressures. The IPCC (2019) identifies coral reefs as the marine system at highest risk from climate change—particularly marine heatwaves and stronger storms—compounded by ocean acidification. 
+      Local stressors exacerbate these impacts: nutrient and sediment runoff, marine pollution, and overfishing (including destructive methods) all erode reef condition and resilience.</p>
 
-  <p>
-    <em>Figure 1</em>
-  </p>
+      <p><em>Figure 1</em></p>
 
-  <p>
-    Consistent with these risks, four decades of monitoring synthesized by the Global Coral Reef Monitoring Network indicate persistent declines in live hard-coral cover. 
-    Between 2009 and 2018 alone, successive mass-bleaching events linked to warming caused an estimated 14% loss of coral cover worldwide—greater than the total coral currently found on Australia’s reefs (GCRMN, 2020).
-  </p>
+      <p>Consistent with these risks, four decades of monitoring synthesized by the Global Coral Reef Monitoring Network indicate persistent declines in live hard-coral cover. 
+      Between 2009 and 2018 alone, successive mass-bleaching events linked to warming caused an estimated 14% loss of coral cover worldwide—greater than the total coral currently found on Australia’s reefs (GCRMN, 2020).</p>
 
-  <p>
-    <em>Figure 2</em>
-  </p>
+      <p><em>Figure 2</em></p>
 
-  <p>
-    As coral cover drops and structural complexity flattens, competitive balance shifts toward fleshy algae, especially where herbivory is depleted or water quality is poor; global datasets show algal cover increasing over the same period.
-  </p>
+      <p>As coral cover drops and structural complexity flattens, competitive balance shifts toward fleshy algae, especially where herbivory is depleted or water quality is poor; global datasets show algal cover increasing over the same period.</p>
 
-  <p>
-    <em>Figure 3</em>
-  </p>
+      <p><em>Figure 3</em></p>
 
-  <p>
-    These community changes reduce biodiversity and weaken the delivery of ecosystem services—lower and less stable fisheries yields, diminished tourism appeal, and reduced natural coastal protection. 
-    Despite these trends, recovery is possible. Many reefs can rebound from bleaching and storm damage when stressors abate, particularly where water quality is high, herbivorous fish populations are intact, and recovery windows between heat events are sufficiently long.
-  </p>
+      <p>These community changes reduce biodiversity and weaken the delivery of ecosystem services—lower and less stable fisheries yields, diminished tourism appeal, and reduced natural coastal protection. 
+      Despite these trends, recovery is possible. Many reefs can rebound from bleaching and storm damage when stressors abate, particularly where water quality is high, herbivorous fish populations are intact, and recovery windows between heat events are sufficiently long.</p>
 
-  <p>
-    <strong>Why this matters:</strong><br>
-    Coral reefs lie at the intersection of today’s three interconnected environmental crises: biodiversity loss, climate change, and pollution. 
-    Even if global warming is limited to 1.5 °C, prolonged heat stress is projected to put the vast majority of reefs at risk by mid-century. 
-    The consequences extend beyond species loss: hundreds of millions of people—especially in least-developed countries, economies in transition, and small island developing states—depend on reefs for food security, income, cultural identity, and coastal safety. 
-    Safeguarding live coral cover and preserving the structural complexity of reefs is therefore both an ecological and a human development priority.
-  </p>
-</section>
+      <p><strong>Why this matters:</strong><br>
+      Coral reefs lie at the intersection of today’s three interconnected environmental crises: biodiversity loss, climate change, and pollution. 
+      Even if global warming is limited to 1.5 °C, prolonged heat stress is projected to put the vast majority of reefs at risk by mid-century. 
+      The consequences extend beyond species loss: hundreds of millions of people—especially in least-developed countries, economies in transition, and small island developing states—depend on reefs for food security, income, cultural identity, and coastal safety. 
+      Safeguarding live coral cover and preserving the structural complexity of reefs is therefore both an ecological and a human development priority.</p>
+    </section>
 
+    <section id="section-2">
+      <h2>Section 2</h2>
+      <p>Content for section 2...</p>
 
-  <section id="section-2">
-    <h2>Section 2</h2>
-    <p>Content for section 2...</p>
-
-    <div id="sub-section-2a">
-      <h3>Sub-section 2A</h3>
-      <p>Content for sub-section 2A...</p>
-    </div>
-    <div id="sub-section-2b">
-      <h3>Sub-section 2B</h3>
-      <p>Content for sub-section 2B...</p>
-    </div>
-  </section>
+      <div id="sub-section-2a">
+        <h3>Sub-section 2A</h3>
+        <p>Content for sub-section 2A...</p>
+      </div>
+      <div id="sub-section-2b">
+        <h3>Sub-section 2B</h3>
+        <p>Content for sub-section 2B...</p>
+      </div>
+    </section>
+  </div>
 
   <!-- References -->
-  <section id="references">
+  <section id="references" class="content-container">
     <h2>References</h2>
     <ul>
       <li>Brody, J. E. (2007). Mental reserves keep brain agile.</li>
@@ -153,6 +164,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
