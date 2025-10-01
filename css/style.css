@@ -17,20 +17,30 @@ header nav {
   display: flex;
   justify-content: center;
   gap: 30px;
-  background-color: #295a75; /* Jellyfish pastel teal */
+  background-color: #295a75; /* Dark ocean/jellyfish-inspired blue */
   padding: 15px 0;
-  border-bottom: 2px solid #295a75; /* optional accent line */
+  border-bottom: 2px solid #1f4f61; /* subtle accent line */
 }
 
 header nav a {
-  color: #295a75; /* Dark teal for contrast */
+  color: #ffffff; /* White text for contrast */
   text-decoration: none;
   font-weight: bold;
 }
 
 header nav a:hover {
   text-decoration: underline;
+  color: #a3d5e0; /* Light accent on hover */
 }
+
+/* Footer */
+footer {
+  background-color: #295a75; /* Same as header */
+  color: #ffffff; /* White text */
+  padding: 20px 0;
+  border-top: 2px solid #1f4f61; /* subtle accent line */
+}
+
 
 /* Hero Section */ 
 .hero h1 { font-size: 3em; margin-bottom: 10px; } 
@@ -43,10 +53,10 @@ header nav a:hover {
 
 /* Footer */
 footer {
-  background: #295a75; /* Jellyfish pastel teal */
-  color: #1b2ebf; /* Dark teal text */
+  background-color: #295a75; /* Same as header */
+  color: #ffffff; /* White text */
   padding: 20px 0;
-  border-top: 2px solid #4dd0e1; /* optional accent line */
+  border-top: 2px solid #1f4f61; /* subtle accent line */
 }
 
 
