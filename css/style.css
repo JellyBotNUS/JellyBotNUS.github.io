@@ -12,40 +12,40 @@ section, .table-of-content { max-width: 900px; margin: 40px auto;
   text-align: left; /* left-aligns the text inside the container */ 
 } 
 
-/* Navigation styling */
+/* Navigation */
 header nav {
   display: flex;
   justify-content: center;
   gap: 30px;
-  background-color: #295a75; /* Dark ocean/jellyfish-inspired blue */
+  background-color: transparent; /* transparent so hero bg shows */
   padding: 15px 0;
-  border-bottom: 2px solid #1f4f61; /* subtle accent line */
+  position: absolute; /* sits on top of hero */
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
-
 header nav a {
-  color: #ffffff; /* White text for contrast */
+  color: white; /* make links white so visible on dark bg */
   text-decoration: none;
   font-weight: bold;
 }
-
 header nav a:hover {
   text-decoration: underline;
-  color: #a3d5e0; /* Light accent on hover */
+}
+
+/* Hero section with background */
+.hero {
+  position: relative;
+  background-image: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 160px 20px 120px; /* more top padding to push content below nav */
 }
 
 
-/* Footer */
-footer {
-  background-color: #295a75; /* Same as header */
-  color: #ffffff; /* White text */
-  padding: 20px 0;
-  border-top: 2px solid #1f4f61; /* subtle accent line */
-}
 
-
-/* Hero Section */ 
-.hero h1 { font-size: 3em; margin-bottom: 10px; } 
-.hero p { font-size: 1.2em; margin-bottom: 30px; } 
 
 /* Features Section */ 
 
@@ -70,6 +70,7 @@ footer {
 img {
   border-radius: 5px 5px 0 0;
 }
+
 
 
 
