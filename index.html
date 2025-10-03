@@ -10,31 +10,78 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
   <style>
-    /* Soft-left alignment container */
-    .content-container {
-      max-width: 900px; /* limits text width */
-      margin: 0 auto;   /* centers container horizontally */
-      padding: 0 20px;  /* side padding */
-      text-align: left; /* left-align text inside container */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
-    .features div {
-      text-align: left; /* left-align feature boxes */
+    /* Navigation */
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #295a75;
+      padding: 15px 0;
     }
-
-    .hero {
-      text-align: center; /* keep hero section centered */
-    }
-
-    nav {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      margin: 0 15px;
+    header nav a {
+      color: white;
       text-decoration: none;
-      color: black;
+      font-weight: bold;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero section with background */
+    .hero {
+      position: relative;
+      background-image: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+      z-index: 0;
+    }
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Features grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .feature-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .feature-card h2 {
+      margin-top: 0;
+      color: #295a75;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #295a75;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -55,51 +102,29 @@
     <p>Exploring the ocean with innovative robotics</p>
   </section>
 
-  <!-- Card -->
-  <div class="card">
-	  <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true" style="width:100%">
-	  <div class="container">
-		  <h4><b>Electrical Components</b></h4>
-	  </div>
-  </div>
-  
-  <!-- Features -->
-  <section class="features content-container">
-    <div>
+  <!-- Features as cards -->
+  <section class="features">
+    <div class="feature-card">
       <h2>Durable Design</h2>
       <p>Built with PVC and waterproof housing for long-term operation.</p>
     </div>
-    <div>
+    <div class="feature-card">
       <h2>Camera Dome</h2>
       <p>Integrated camera dome for underwater exploration.</p>
     </div>
-    <div>
+    <div class="feature-card">
       <h2>Smart Navigation</h2>
       <p>Ultrasonic sensors and tentacles for realistic movement.</p>
     </div>
+    <div class="feature-card">
+      <h2>Energy Efficient</h2>
+      <p>Biomimetic propulsion reduces energy use for extended missions.</p>
+    </div>
   </section>
-
-  <sl-divider></sl-divider>
-
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Jellybot Project</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
