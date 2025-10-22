@@ -9,20 +9,108 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #0a3d62; /* ocean dark blue */
+      padding: 15px 0;
+    }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      background-image: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
     .content-container {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 20px;
       text-align: left;
     }
-    nav {
+
+    /* Subsystem Section */
+    .subsystem-overview {
       text-align: center;
-      margin-bottom: 20px;
+      padding: 40px 20px 20px;
     }
-    nav a {
-      margin: 0 15px;
+    .subsystem-overview h2 {
+      color: #0a3d62;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .subsystem-overview p {
+      color: #333;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .subsystems {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      padding: 20px 20px 60px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .cube {
+      background-color: #0a3d62;
+      color: white;
+      border-radius: 15px;
+      text-align: center;
+      padding: 50px 20px;
       text-decoration: none;
-      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .cube:hover {
+      background-color: #1b6ca8;
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background-color: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .table-of-content {
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -41,6 +129,22 @@
   <section class="hero">
     <h1>Final Year Project Report</h1>
     <p>Jellybot: Exploring the ocean with innovative robotics</p>
+  </section>
+
+  <sl-divider></sl-divider>
+
+  <!-- Subsystem Overview -->
+  <section class="subsystem-overview">
+    <h2>Subsystem Overview</h2>
+    <p>The Jellybot is composed of four main subsystems that work together harmoniously to achieve efficient, biomimetic underwater motion and data collection. Each subsystem focuses on a critical aspect of design and performance — from structure and propulsion to control and electronics.</p>
+  </section>
+
+  <!-- Subsystem Selection -->
+  <section class="subsystems">
+    <a href="mechanical.html" class="cube">Mechanical</a>
+    <a href="electrical.html" class="cube">Electrical</a>
+    <a href="propulsion.html" class="cube">Propulsion</a>
+    <a href="electronics.html" class="cube">Electronics</a>
   </section>
 
   <sl-divider></sl-divider>
@@ -70,78 +174,30 @@
 
   <sl-divider></sl-divider>
 
-  <!-- Sections -->
+  <!-- Report Sections -->
   <div class="content-container">
     <section id="section-1">
       <h2>1. Background</h2>
-
-      <p><strong>Importance of coral reefs:</strong><br>
-      Coral reefs are the most species-rich ecosystems in the ocean. Although they occur across more than one hundred countries and occupy well under 1% of the seafloor, their intricate, three-dimensional frameworks provide habitat, nursery grounds, and feeding areas for roughly a quarter of described marine species. 
-      This biological richness translates into substantial human benefits: reef fisheries and tourism support livelihoods, reef crests dissipate wave energy and reduce flooding, and bioprospecting has yielded medically relevant compounds. 
-      Recent global assessments estimate the combined value of these services at around US$2.7 trillion per year (GCRMN, 2020).</p>
-
-      <p><strong>Status and pressures:</strong><br>
-      Reefs are also among the ecosystems most exposed to human pressures. The IPCC (2019) identifies coral reefs as the marine system at highest risk from climate change—particularly marine heatwaves and stronger storms—compounded by ocean acidification. 
-      Local stressors exacerbate these impacts: nutrient and sediment runoff, marine pollution, and overfishing (including destructive methods) all erode reef condition and resilience.</p>
-
-      <p><em>Figure 1</em></p>
-
-      <p>Consistent with these risks, four decades of monitoring synthesized by the Global Coral Reef Monitoring Network indicate persistent declines in live hard-coral cover. 
-      Between 2009 and 2018 alone, successive mass-bleaching events linked to warming caused an estimated 14% loss of coral cover worldwide—greater than the total coral currently found on Australia’s reefs (GCRMN, 2020).</p>
-
-      <p><em>Figure 2</em></p>
-
-      <p>As coral cover drops and structural complexity flattens, competitive balance shifts toward fleshy algae, especially where herbivory is depleted or water quality is poor; global datasets show algal cover increasing over the same period.</p>
-
-      <p><em>Figure 3</em></p>
-
-      <p>These community changes reduce biodiversity and weaken the delivery of ecosystem services—lower and less stable fisheries yields, diminished tourism appeal, and reduced natural coastal protection. 
-      Despite these trends, recovery is possible. Many reefs can rebound from bleaching and storm damage when stressors abate, particularly where water quality is high, herbivorous fish populations are intact, and recovery windows between heat events are sufficiently long.</p>
-
-      <p><strong>Why this matters:</strong><br>
-      Coral reefs lie at the intersection of today’s three interconnected environmental crises: biodiversity loss, climate change, and pollution. 
-      Even if global warming is limited to 1.5 °C, prolonged heat stress is projected to put the vast majority of reefs at risk by mid-century. 
-      The consequences extend beyond species loss: hundreds of millions of people—especially in least-developed countries, economies in transition, and small island developing states—depend on reefs for food security, income, cultural identity, and coastal safety. 
-      Safeguarding live coral cover and preserving the structural complexity of reefs is therefore both an ecological and a human development priority.</p>
+      <p>Coral reefs are among the most biologically diverse ecosystems on Earth...</p>
     </section>
 
     <section id="section-2">
-      <h2>2. Value Preposition</h2>
-      <p>Defining a value proposition is an essential step in clarifying why a product is relevant, 
-        how it stands out from existing alternatives, and why key stakeholders should adopt it. Unlike technical specifications, 
-        the value proposition highlights both tangible and intangible benefits, making it compelling for end users..</p>
-
+      <h2>2. Value Proposition</h2>
       <div id="sub-section-2a">
         <h3>2.1 Application to JellyBot</h3>
         <p>Content for sub-section 2A...</p>
       </div>
       <div id="sub-section-2b">
-        <h3>2.2 Value Preposition Statement</h3>
-        <p>Our jellyfish-inspired underwater robot helps marine researchers and ecologists who want to observe and capture data on marine life 
-          in fragile ecosystems by providing compact, silent, and biomimetic propulsion and minimizing disturbance to natural behavior.
-          Unlike traditional ROVs or human divers, it enables unobtrusive, energy-efficient exploration in shallow and complex reef environments..</p>
+        <h3>2.2 Value Proposition Statement</h3>
+        <p>Our jellyfish-inspired underwater robot helps marine researchers...</p>
       </div>
     </section>
 
-        <section id="section-3">
+    <section id="section-3">
       <h2>3. Literature Review</h2>
-      <p>Defining a value proposition is an essential step in clarifying why a product is relevant, 
-        how it stands out from existing alternatives, and why key stakeholders should adopt it. Unlike technical specifications, 
-        the value proposition highlights both tangible and intangible benefits, making it compelling for end users..</p>
-
-      <div id="sub-section-3a">
-        <h3>3.1 Introduction</h3>
-        <p>Content for sub-section 2A...</p>
-      </div>
-      <div id="sub-section-3b">
-        <h3>3.2 Case Study</h3>
-        <p>Our jellyfish-inspired underwater robot helps marine researchers and ecologists who want to observe and capture data on marine life 
-          in fragile ecosystems by providing compact, silent, and biomimetic propulsion and minimizing disturbance to natural behavior.
-          Unlike traditional ROVs or human divers, it enables unobtrusive, energy-efficient exploration in shallow and complex reef environments..</p>
-      </div>
+      <p>Defining a value proposition is an essential step...</p>
     </section>
   </div>
-
 
   <!-- References -->
   <section id="references" class="content-container">
