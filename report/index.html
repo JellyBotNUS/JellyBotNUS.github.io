@@ -61,28 +61,40 @@
 
     /* Subsystem Section */
     .subsystem-overview {
-      text-align: center;
-      padding: 40px 20px 20px;
+      max-width: 900px;
+      margin: 60px auto 10px;
+      padding: 0 20px;
+      position: relative;
     }
-    .subsystem-overview h2 {
-      color: #0a3d62;
-      font-size: 2rem;
+    
+    .subsystem-header {
+      text-align: left;
       margin-bottom: 10px;
     }
+    
+    .subsystem-header h2 {
+      color: #0a3d62;
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    
     .subsystem-overview p {
+      text-align: justify;
       color: #333;
       font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
+      line-height: 1.6;
+      margin: 0 auto 25px;
+      max-width: 750px;
     }
 
     .subsystems {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 25px;
-      padding: 20px 20px 60px;
+      gap: 20px;
+      padding: 10px 20px 40px;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
     }
     .cube {
       background-color: #0a3d62;
