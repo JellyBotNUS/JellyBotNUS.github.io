@@ -1,161 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jellybot Report</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electronics | Jellybot</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
   <style>
-    .content-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: left;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
-    nav {
-      text-align: center;
-      margin-bottom: 20px;
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #0a3d62;
+      padding: 15px 0;
     }
-    nav a {
-      margin: 0 15px;
+
+    header nav a {
+      color: white;
       text-decoration: none;
-      color: black;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      background-image: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/pic06.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 2.8rem;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      font-size: 1.3rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px 80px;
+    }
+
+    h2 {
+      color: #0a3d62;
+      margin-top: 40px;
+      border-bottom: 3px solid #0a3d62;
+      padding-bottom: 6px;
+    }
+
+    p {
+      text-align: justify;
+      color: #333;
+    }
+
+    footer {
+      background-color: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .table-of-content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .table-of-content h2 {
+      color: #0a3d62;
+      border-bottom: 3px solid #0a3d62;
+      padding-bottom: 6px;
+    }
+
+    .table-of-content sl-tree {
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
+
   <!-- Navigation -->
   <header>
     <nav>
-      <a href="../home.html">Home</a>
+      <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-      <a href="../report/index.html">Report</a>
+      <a href="report.html">Report</a>
     </nav>
   </header>
 
-  <!-- Report Title -->
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Electronics Subsystem Report</h1>
-    <p>Jellybot: Exploring the ocean with innovative robotics</p>
+    <h1>Electronics<br><span style="font-size: 40%;"><em>By Wallace</em></span></h1>
+    <p style="text-align: center; color:white">Integrating sensors and control circuit for precise underwater operation</p>
   </section>
 
-  <sl-divider></sl-divider>
-
-  <!-- Table of Contents -->
+  <!-- Table of content -->
   <section class="table-of-content content-container">
-    <h2>Table of Contents</h2>
-    <sl-tree>
-      <sl-tree-item expanded>
-        <a href="#section-1">1. Background</a>
-      </sl-tree-item>
-      <sl-tree-item expanded>
-        <a href="#section-2">2. Value Proposition</a>
-        <sl-tree-item><a href="#sub-section-2a">2.1 Application to JellyBot</a></sl-tree-item>
-        <sl-tree-item><a href="#sub-section-2b">2.2 Value Proposition Statement</a></sl-tree-item>
-      </sl-tree-item>
-      <sl-tree-item expanded>
-        <a href="#section-3">3. Literature Review</a>
-        <sl-tree-item><a href="#sub-section-3a">3.1 Introduction</a></sl-tree-item>
-        <sl-tree-item><a href="#sub-section-3b">3.2 Case Study</a></sl-tree-item>
-      </sl-tree-item>
-      <sl-tree-item>
-        <a href="#references">References</a>
-      </sl-tree-item>
-    </sl-tree>
-  </section>
+  <h2>Table of Contents</h2>
+  <sl-tree>
+    <sl-tree-item>
+      <a href="#section-1">1. Overview</a>
+    </sl-tree-item>
+    <sl-tree-item>
+      <a href="#section-2">2. Deisgn</a>
+      <sl-tree-item><a href="#sub-section-2a">2.1 Application to JellyBot</a></sl-tree-item>
+      <sl-tree-item><a href="#sub-section-2b">2.2 Value Proposition Statement</a></sl-tree-item>
+    </sl-tree-item>
+    <sl-tree-item>
+      <a href="#section-3">3. Concepts</a>
+      <sl-tree-item><a href="#sub-section-3a">3.1 Introduction</a></sl-tree-item>
+      <sl-tree-item><a href="#sub-section-3b">3.2 Case Study</a></sl-tree-item>
+    </sl-tree-item>
+    <sl-tree-item>
+      <a href="#references">Summary</a>
+    </sl-tree-item>
+  </sl-tree>
+</section>
 
-  <sl-divider></sl-divider>
-
-  <!-- Sections -->
-  <div class="content-container">
-    <section id="section-1">
-      <h2>1. Background</h2>
-
-      <p><strong>Importance of coral reefs:</strong><br>
-      Coral reefs are the most species-rich ecosystems in the ocean. Although they occur across more than one hundred countries and occupy well under 1% of the seafloor, their intricate, three-dimensional frameworks provide habitat, nursery grounds, and feeding areas for roughly a quarter of described marine species. 
-      This biological richness translates into substantial human benefits: reef fisheries and tourism support livelihoods, reef crests dissipate wave energy and reduce flooding, and bioprospecting has yielded medically relevant compounds. 
-      Recent global assessments estimate the combined value of these services at around US$2.7 trillion per year (GCRMN, 2020).</p>
-
-      <p><strong>Status and pressures:</strong><br>
-      Reefs are also among the ecosystems most exposed to human pressures. The IPCC (2019) identifies coral reefs as the marine system at highest risk from climate change—particularly marine heatwaves and stronger storms—compounded by ocean acidification. 
-      Local stressors exacerbate these impacts: nutrient and sediment runoff, marine pollution, and overfishing (including destructive methods) all erode reef condition and resilience.</p>
-
-      <p><em>Figure 1</em></p>
-
-      <p>Consistent with these risks, four decades of monitoring synthesized by the Global Coral Reef Monitoring Network indicate persistent declines in live hard-coral cover. 
-      Between 2009 and 2018 alone, successive mass-bleaching events linked to warming caused an estimated 14% loss of coral cover worldwide—greater than the total coral currently found on Australia’s reefs (GCRMN, 2020).</p>
-
-      <p><em>Figure 2</em></p>
-
-      <p>As coral cover drops and structural complexity flattens, competitive balance shifts toward fleshy algae, especially where herbivory is depleted or water quality is poor; global datasets show algal cover increasing over the same period.</p>
-
-      <p><em>Figure 3</em></p>
-
-      <p>These community changes reduce biodiversity and weaken the delivery of ecosystem services—lower and less stable fisheries yields, diminished tourism appeal, and reduced natural coastal protection. 
-      Despite these trends, recovery is possible. Many reefs can rebound from bleaching and storm damage when stressors abate, particularly where water quality is high, herbivorous fish populations are intact, and recovery windows between heat events are sufficiently long.</p>
-
-      <p><strong>Why this matters:</strong><br>
-      Coral reefs lie at the intersection of today’s three interconnected environmental crises: biodiversity loss, climate change, and pollution. 
-      Even if global warming is limited to 1.5 °C, prolonged heat stress is projected to put the vast majority of reefs at risk by mid-century. 
-      The consequences extend beyond species loss: hundreds of millions of people—especially in least-developed countries, economies in transition, and small island developing states—depend on reefs for food security, income, cultural identity, and coastal safety. 
-      Safeguarding live coral cover and preserving the structural complexity of reefs is therefore both an ecological and a human development priority.</p>
-    </section>
-
-    <section id="section-2">
-      <h2>2. Value Preposition</h2>
-      <p>Defining a value proposition is an essential step in clarifying why a product is relevant, 
-        how it stands out from existing alternatives, and why key stakeholders should adopt it. Unlike technical specifications, 
-        the value proposition highlights both tangible and intangible benefits, making it compelling for end users..</p>
-
-      <div id="sub-section-2a">
-        <h3>2.1 Application to JellyBot</h3>
-        <p>Content for sub-section 2A...</p>
-      </div>
-      <div id="sub-section-2b">
-        <h3>2.2 Value Preposition Statement</h3>
-        <p>Our jellyfish-inspired underwater robot helps marine researchers and ecologists who want to observe and capture data on marine life 
-          in fragile ecosystems by providing compact, silent, and biomimetic propulsion and minimizing disturbance to natural behavior.
-          Unlike traditional ROVs or human divers, it enables unobtrusive, energy-efficient exploration in shallow and complex reef environments..</p>
-      </div>
-    </section>
-
-        <section id="section-3">
-      <h2>3. Literature Review</h2>
-      <p>Defining a value proposition is an essential step in clarifying why a product is relevant, 
-        how it stands out from existing alternatives, and why key stakeholders should adopt it. Unlike technical specifications, 
-        the value proposition highlights both tangible and intangible benefits, making it compelling for end users..</p>
-
-      <div id="sub-section-3a">
-        <h3>3.1 Introduction</h3>
-        <p>Content for sub-section 2A...</p>
-      </div>
-      <div id="sub-section-3b">
-        <h3>3.2 Case Study</h3>
-        <p>Our jellyfish-inspired underwater robot helps marine researchers and ecologists who want to observe and capture data on marine life 
-          in fragile ecosystems by providing compact, silent, and biomimetic propulsion and minimizing disturbance to natural behavior.
-          Unlike traditional ROVs or human divers, it enables unobtrusive, energy-efficient exploration in shallow and complex reef environments..</p>
-      </div>
-    </section>
-  </div>
+  <!-- Main Content -->
+  <main>
+    <h2>1. Overview of the Electronics System</h2>
+    <p>
+  The electronics subsystem serves as the control and sensory core of Jellybot, managing communication between hardware components.
+  It integrates the microcontroller, sensor interfaces, and signal conditioning circuits that process data for navigation and control.
+  Robust waterproofing and organized PCB layout ensure operational reliability even under high pressure and humidity.
+    </p>
 
 
-  <!-- References -->
-  <section id="references" class="content-container">
-    <h2>References</h2>
-    <ul>
-      <li>Brody, J. E. (2007). Mental reserves keep brain agile.</li>
-      <li>Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008). Enhancing worker well-being.</li>
-    </ul>
-  </section>
+    <h2>2. Components lists</h2>
+    <p>
+      Components Table
+    </p>
+
+    <h2>3. Systems Diagrams and subsystems  </h2>
+    <p>
+      Subsystems Table
+    </p>
+
+    <h2>4. Summary and Future Improvements</h2>
+    <p>
+  The electronics subsystem effectively manages signal processing, data acquisition, and communication between sensors and control modules.
+  It forms the core intelligence that enables Jellybot’s autonomous functions and real-time responsiveness.
+  Future iterations could integrate more compact embedded processors, improved sensor fusion techniques, and enhanced waterproofing strategies to increase performance, reduce latency, and support more advanced underwater analytics.
+    </p>
+
+  </main>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Jellybot Project</p>
+    <p>© 2025 Jellybot Project — Mechanical Subsystem by Afham</p>
   </footer>
+
 </body>
 </html>
-
