@@ -54,17 +54,49 @@
       z-index: 1;
     }
 
-    /* Subsystem cubes */
-    .subsystems {
+    /* Features section */
+    .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
     }
+    .feature-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .feature-card h2 {
+      color: #0a3d62;
+      margin-top: 0;
+    }
+
+    /* Subsystem Section */
+    .subsystem-heading {
+      text-align: center;
+      color: #0a3d62;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 60px;
+    }
+    .subsystems {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 40px 20px 80px;
+      max-width: 1000px;
+      margin: auto;
+    }
     .cube {
-      background-color: #0a3d62; /* ocean blue */
+      background-color: #0a3d62;
       color: white;
       border-radius: 15px;
       text-align: center;
@@ -76,7 +108,7 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
     .cube:hover {
-      background-color: #1b6ca8; /* lighter ocean blue */
+      background-color: #1b6ca8;
       transform: translateY(-5px);
     }
 
@@ -107,7 +139,28 @@
     <p>Exploring the ocean with innovative robotics</p>
   </section>
 
-  <!-- Subsystems Section -->
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-card">
+      <h2>Durable Design</h2>
+      <p>Built with waterproof PVC housing and a fully sealed structure for underwater endurance.</p>
+    </div>
+    <div class="feature-card">
+      <h2>Camera Dome</h2>
+      <p>Provides clear underwater imaging for coral and ecosystem observation.</p>
+    </div>
+    <div class="feature-card">
+      <h2>Smart Navigation</h2>
+      <p>Integrated sensors for obstacle detection and stable control underwater.</p>
+    </div>
+    <div class="feature-card">
+      <h2>Energy Efficient</h2>
+      <p>Biomimetic propulsion mimics jellyfish motion for sustainable ocean exploration.</p>
+    </div>
+  </section>
+
+  <!-- Subsystem Section -->
+  <h2 class="subsystem-heading">Subsystem Overview</h2>
   <section class="subsystems">
     <a href="report/mechanical.html" class="cube">Mechanical</a>
     <a href="report/electrical.html" class="cube">Electrical</a>
@@ -121,4 +174,3 @@
   </footer>
 </body>
 </html>
-
