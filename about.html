@@ -89,8 +89,8 @@
     .team-members {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 40px;
+      justify-content: center;
+      gap: 30px;
       margin-top: 30px;
     }
 
@@ -101,11 +101,21 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       flex: 1 1 200px;
+      max-width: 220px;
       transition: transform 0.3s;
     }
 
     .team-member:hover {
       transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #295a75;
     }
 
     .team-member h3 {
@@ -178,23 +188,27 @@
       <h2>Meet the Team</h2>
       <div class="team-members">
         <div class="team-member">
+          <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/afham.jpg?raw=true" alt="Afham">
           <h3>Afham</h3>
-          <h4>Mechanical and Team Lead</h4>
+          <h4>Mechanical Lead</h4>
           <p>NUS Electrical Engineering</p>
         </div>
         <div class="team-member">
+          <img src="images/darrel.jpg" alt="Darrel">
           <h3>Darrel</h3>
-          <h4>Electrical Engineer</h4>
+          <h4>Electrical Lead</h4>
           <p>NUS Electrical Engineering</p>
         </div>
         <div class="team-member">
+          <img src="images/navin.jpg" alt="Navin">
           <h3>Navin</h3>
           <h4>Propulsion Engineer</h4>
           <p>NUS Electrical Engineering</p>
         </div>
         <div class="team-member">
+          <img src="images/wallace.jpg" alt="Wallace">
           <h3>Wallace</h3>
-          <h4>Electronics and Control Engineer</h4>
+          <h4>Electronics and Control</h4>
           <p>NUS Electrical Engineering</p>
         </div>
       </div>
