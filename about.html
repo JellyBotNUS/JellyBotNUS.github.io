@@ -3,67 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Jellybot</title>
+  <title>About JellyBot</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #003049;
+    }
+
+    /* Header Navigation */
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #295a75;
+      padding: 15px 0;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background-image: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      font-size: 1.3em;
+      margin-top: 10px;
+      color: #dbe8f4;
+    }
+
+    /* Content Container */
     .content-container {
       max-width: 900px;
-      margin: 0 auto;
+      margin: 40px auto;
       padding: 0 20px;
       text-align: left;
     }
 
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #295a75;
+      border-left: 5px solid #295a75;
+      padding-left: 10px;
+    }
+
+    /* Team Section */
     .team-members {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       gap: 40px;
-      margin-top: 20px;
-      align-items: flex-start;
+      margin-top: 30px;
     }
 
     .team-member {
-      text-align: left;
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex: 1 1 200px;
+      transition: transform 0.3s;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
     }
 
     .team-member h3 {
-      margin: 0;
-      font-size: 1.2em;
+      margin-bottom: 5px;
+      color: #003049;
+    }
+
+    .team-member h4 {
+      margin-top: 0;
+      color: #295a75;
+      font-weight: normal;
     }
 
     .team-member p {
-      margin: 2px 0 0 0;
-      font-size: 0.95em;
       color: #555;
-
-/* Soft-left alignment container */
-    .content-container {
-      max-width: 900px; /* limits text width */
-      margin: 0 auto;   /* centers container horizontally */
-      padding: 0 20px;  /* side padding */
-      text-align: left; /* left-align text inside container */
+      font-size: 0.9em;
     }
 
-    .features div {
-      text-align: left; /* left-align feature boxes */
-    }
-
-    .hero {
-      text-align: center; /* keep hero section centered */
-    }
-
-    nav {
+    footer {
+      background-color: #295a75;
+      color: white;
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: black;
-    }
+      padding: 20px 0;
     }
   </style>
 </head>
+
 <body>
+  <!-- Navigation -->
   <header>
     <nav>
       <a href="../index.html">Home</a>
@@ -73,48 +144,66 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>The Story of JellyBot</h1>
+    <p>Innovating marine exploration through bio-inspired robotics</p>
+  </section>
+
+  <!-- Mission, Vision, and Beliefs -->
   <div class="content-container">
-    <section class="content">
-      <h1>About Jellybot</h1>
-      <p>Jellybot is a bio-inspired underwater robot designed to mimic the elegant propulsion of jellyfish. Built from PVC and equipped with sensors, Jellybot is both cost-effective and durable for marine exploration.</p>
+    <section>
+      <h2>Our Mission</h2>
+      <p>
+        To develop an eco-friendly, affordable, and intelligent underwater robot that redefines how marine ecosystems are explored and monitored — minimizing disruption to the environment while maximizing data accuracy.
+      </p>
     </section>
 
+    <section>
+      <h2>Our Vision</h2>
+      <p>
+        We envision a future where sustainable marine research is accessible to all. By merging biomimicry and technology, JellyBot aims to empower researchers and conservationists with a gentle yet powerful tool for long-term oceanic discovery.
+      </p>
+    </section>
+
+    <section>
+      <h2>What We Believe In</h2>
+      <p>
+        At JellyBot, we believe innovation should coexist with nature. Our design philosophy embraces the harmony of technology and biology — ensuring that every movement, material, and mechanism serves both science and sustainability.
+      </p>
+    </section>
+
+    <!-- Team Members -->
     <section class="team-members-section">
-      <h2>Team Members</h2>
+      <h2>Meet the Team</h2>
       <div class="team-members">
         <div class="team-member">
-          <h3>Afham l</h3>
-          <h2>Mechanical</h2>
+          <h3>Afham</h3>
+          <h4>Mechanical and Team Lead</h4>
           <p>NUS Electrical Engineering</p>
         </div>
         <div class="team-member">
           <h3>Darrel</h3>
-          <h2>Electrical</h2>
+          <h4>Electrical Engineer</h4>
           <p>NUS Electrical Engineering</p>
         </div>
         <div class="team-member">
           <h3>Navin</h3>
-          <h2>Propulsion</h2>
+          <h4>Propulsion Engineer</h4>
           <p>NUS Electrical Engineering</p>
         </div>
         <div class="team-member">
           <h3>Wallace</h3>
-          <h2>Electronics</h2>
+          <h4>Electronics and Control Engineer</h4>
           <p>NUS Electrical Engineering</p>
         </div>
       </div>
     </section>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Jellybot Project</p>
+    <p>© 2025 JellyBot Project | National University of Singapore</p>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
