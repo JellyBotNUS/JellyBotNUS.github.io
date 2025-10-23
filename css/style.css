@@ -84,3 +84,13 @@ footer {
 img {
   border-radius: 5px 5px 0 0; /* rounded top corners */
 }
+
+.hero {
+  width: 100vw;             /* full viewport width */
+  max-width: 100vw;         /* remove the 900px constraint */
+  margin: 0;                /* no centering margin */
+  background-size: cover;   /* make sure it covers horizontally and vertically */
+  background-position: center;
+}
+
+
