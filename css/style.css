@@ -35,6 +35,7 @@ header nav a:hover {
   background-image: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: white;
   text-align: center;
   padding: 120px 20px;
@@ -65,7 +66,7 @@ header nav a:hover {
   margin: 0 auto;
 }
 
-/* ===== FEATURES SECTION ===== */
+/* ===== FEATURES SECTION (Index) ===== */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -91,6 +92,29 @@ header nav a:hover {
 .feature-card h2 {
   color: #0a3d62;
   margin-top: 0;
+}
+
+/* ===== CONTENT CONTAINERS ===== */
+.content-container,
+main {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px 80px;
+  text-align: left;
+}
+
+h2 {
+  color: #0a3d62;
+  margin-top: 40px;
+  border-bottom: 3px solid #0a3d62;
+  padding-bottom: 6px;
+  font-size: 1.8rem;
+}
+
+p {
+  text-align: justify;
+  color: #333;
+  font-size: 1.05rem;
 }
 
 /* ===== SUBSYSTEM SECTION ===== */
@@ -129,7 +153,41 @@ header nav a:hover {
   transform: translateY(-5px);
 }
 
+/* ===== SUBSYSTEM OVERVIEW (Report Pages) ===== */
+.subsystem-overview {
+  max-width: 900px;
+  margin: 60px auto 10px;
+  padding: 0 20px;
+}
+
+.subsystem-header {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.subsystem-header h2 {
+  color: #0a3d62;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.subsystem-overview p {
+  text-align: justify;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 auto 25px;
+  max-width: 750px;
+}
+
 /* ===== TABLE OF CONTENT ===== */
+.table-of-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
 .table-of-content h2 {
   color: #0a3d62;
   border-bottom: 3px solid #0a3d62;
@@ -137,7 +195,87 @@ header nav a:hover {
 }
 
 .table-of-content sl-tree {
-  margin-top: 15px;
+  margin-top: 10px;
+}
+
+/* ===== SUBSECTIONS ===== */
+.subsection {
+  margin-left: 30px;
+  font-size: 1.3em;
+  color: #0a3d62;
+}
+
+/* ===== IMAGE STYLES ===== */
+.center-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.center-image img {
+  width: 70%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+  margin-bottom: 0px;
+}
+
+.image-left {
+  flex: 3;
+}
+
+.image-right {
+  flex: 1;
+}
+
+.image-left img,
+.image-right img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.figure-caption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ===== TABLE STYLES ===== */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.styled-table th {
+  background-color: #0a3d62;
+  color: white;
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+.styled-table td {
+  border: 1px solid #333;
+  padding: 8px;
+  color: #333;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+  background-color: #dbe8f1;
 }
 
 /* ===== FOOTER ===== */
