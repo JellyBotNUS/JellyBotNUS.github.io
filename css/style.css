@@ -30,13 +30,14 @@ header nav a:hover {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  position: relative;
-  background: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true')
-    no-repeat center center / cover;
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
-}
+      position: relative;
+      background-image: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
 
 .hero::before {
   content: "";
@@ -170,3 +171,4 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
