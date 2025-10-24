@@ -6,7 +6,254 @@
   <title>Jellybot Report</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>z
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+  <style>
+  /* ===== GLOBAL ===== */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* ===== NAVIGATION ===== */
+  header nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #0a3d62;
+    padding: 15px 0;
+  }
+
+  header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  header nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== HERO SECTION ===== */
+  .hero {
+    position: relative;
+    background-image: url('https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/backgroundimage.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  .hero h1,
+  .hero p {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  /* ===== MAIN CONTENT CONTAINER ===== */
+  .content-container,
+  main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px 80px;
+    text-align: left;
+  }
+
+  h2 {
+    color: #0a3d62;
+    margin-top: 40px;
+    border-bottom: 3px solid #0a3d62;
+    padding-bottom: 6px;
+    font-size: 1.8rem;
+  }
+
+  p {
+    text-align: justify;
+    color: #333;
+    font-size: 1.05rem;
+  }
+
+  /* ===== SUBSYSTEM SECTION ===== */
+  .subsystem-overview {
+    max-width: 900px;
+    margin: 60px auto 10px;
+    padding: 0 20px;
+  }
+
+  .subsystem-header {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .subsystem-header h2 {
+    color: #0a3d62;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .subsystem-overview p {
+    text-align: justify;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 auto 25px;
+    max-width: 750px;
+  }
+
+  .subsystems {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cube {
+    background-color: #0a3d62;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 50px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .cube:hover {
+    background-color: #1b6ca8;
+    transform: translateY(-5px);
+  }
+
+  /* ===== TABLE OF CONTENT ===== */
+  .table-of-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .table-of-content h2 {
+    color: #0a3d62;
+    border-bottom: 3px solid #0a3d62;
+    padding-bottom: 6px;
+  }
+
+  .table-of-content sl-tree {
+    margin-top: 10px;
+  }
+
+  /* ===== SUBSECTIONS ===== */
+  .subsection {
+    margin-left: 30px;
+    font-size: 1.3em;
+    color: #0a3d62;
+  }
+
+  /* ===== IMAGE STYLES ===== */
+  .center-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .center-image img {
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 0px;
+  }
+
+  .image-left {
+    flex: 3;
+  }
+
+  .image-right {
+    flex: 1;
+  }
+
+  .image-left img,
+  .image-right img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .figure-caption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  /* ===== TABLE STYLES ===== */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .styled-table th {
+    background-color: #0a3d62;
+    color: white;
+    padding: 10px;
+    border: 1px solid #333;
+  }
+
+  .styled-table td {
+    border: 1px solid #333;
+    padding: 8px;
+    color: #333;
+  }
+
+  .styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .styled-table tr:hover {
+    background-color: #dbe8f1;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+</style>
+
 </head>
 <body>
   <!-- Navigation -->
