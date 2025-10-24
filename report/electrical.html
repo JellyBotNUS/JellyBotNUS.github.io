@@ -223,9 +223,73 @@
     </p>
 
     <h2>3. Electrical systems selection and power calculation </h2>
+    <h2>3.1 Pressure Testing for Optimal Actuation</h2>
     <p>
-      Wiring diagram
+      A series of controlled experiments were conducted to determine the optimal internal pressure of the pneumatic actuators for maximum expansion and responsiveness. 
+      Each configuration combined different numbers of DC air pumps and solenoid valves at varying supply voltages. 
+      The pressure values were measured using a digital barometric sensor connected to the actuator chamber. 
+      Results indicate that increasing voltage and the number of active pumps significantly improves internal pressure generation, enhancing actuator performance.
     </p>
+    
+    <style>
+      .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+    
+      .styled-table th {
+        background-color: #0a3d62;
+        color: white;
+        padding: 10px;
+        border: 1px solid #333;
+      }
+    
+      .styled-table td {
+        border: 1px solid #333;
+        padding: 8px;
+        color: #333;
+      }
+    
+      .styled-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    
+      .styled-table tr:hover {
+        background-color: #dbe8f1;
+      }
+    </style>
+    
+    <table class="styled-table">
+      <tr>
+        <th>System Configuration</th>
+        <th>Voltage</th>
+        <th>Pressure Measured</th>
+      </tr>
+      <tr>
+        <td>1 DC Motor + 1 Solenoid Valve</td>
+        <td>5V (Motor)</td>
+        <td>683 hPa</td>
+      </tr>
+      <tr>
+        <td>1 DC Motor + 1 Solenoid Valve</td>
+        <td>12V</td>
+        <td>1239 hPa</td>
+      </tr>
+      <tr>
+        <td>2 DC Motor + 1 Solenoid Valve (Simultaneous Control)</td>
+        <td>12V</td>
+        <td>1633 hPa</td>
+      </tr>
+      <tr>
+        <td>2 DC Motor + 2 Solenoid Valve (Separate Control)</td>
+        <td>12V</td>
+        <td>Yet to test</td>
+      </tr>
+    </table>
+
     <div class="center-image">
       <img src='https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/Wiring Diagram.jpg?raw=true' alt="Wiring diagram of Jellybot electrical system">
     </div>
