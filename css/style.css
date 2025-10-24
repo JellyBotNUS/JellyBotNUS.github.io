@@ -188,13 +188,14 @@
   }
 
   /* ===== FOOTER ===== */
-  footer {
-      background-color: #0a3d62;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-    }
+    footer {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+    font-size: 0.95rem;
+  }
 
   /* ===== LINKS ===== */
   a {
@@ -206,4 +207,5 @@
     text-decoration: underline;
   }
 </style>
+
 
