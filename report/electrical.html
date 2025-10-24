@@ -104,49 +104,81 @@
       margin-top: 10px;
     }
 
-    .center-image {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-    }
+    .subsection {
+    margin-left: 30px;
+    font-size: 1.3em;
+    color: #0a3d62;
+  }
 
-    .center-image img {
-      max-width: 90%;
-      height: auto;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+  .center-image {
+    text-align: center;
+    margin: 20px 0;
+  }
 
-    .styled-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        text-align: center;
-        font-family: Arial, sans-serif;
-      }
-    
-      .styled-table th {
-        background-color: #0a3d62;
-        color: white;
-        padding: 10px;
-        border: 1px solid #333;
-      }
-    
-      .styled-table td {
-        border: 1px solid #333;
-        padding: 8px;
-        color: #333;
-      }
-    
-      .styled-table tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-    
-      .styled-table tr:hover {
-        background-color: #dbe8f1;
-      }
+  .center-image img {
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
 
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .styled-table th {
+    background-color: #0a3d62;
+    color: white;
+    padding: 10px;
+    border: 1px solid #333;
+  }
+
+  .styled-table td {
+    border: 1px solid #333;
+    padding: 8px;
+    color: #333;
+  }
+
+  .styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .styled-table tr:hover {
+    background-color: #dbe8f1;
+  }
+
+  .image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .image-left {
+    flex: 3;
+  }
+
+  .image-right {
+    flex: 1;
+  }
+
+  .image-left img,
+  .image-right img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .figure-caption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+    font-style: italic;
+  }
   </style>
 </head>
 <body>
@@ -251,8 +283,13 @@
       Total Power Requirement: 32.31W
     </p>
 
-    <h2>3. Electrical systems selection and power calculation </h2>
-    <h2>3.1 Pressure Testing for Optimal Actuation</h2>
+    <h2>3. Electrical systems & Tests </h2>
+    <p>
+  The electrical system controls all actuation, power distribution, and timing within Jellybot. 
+  It manages the coordination between the pumps, solenoid valves, and power regulation circuits.
+    </p>
+    
+    <h3 class="subsection">3.1 Pressure Testing for Optimal Actuation</h2>
     <p>
       A series of controlled experiments were conducted to determine the optimal internal pressure of the pneumatic actuators for maximum expansion and responsiveness. 
       Each configuration combined different numbers of DC air pumps and solenoid valves at varying supply voltages. 
@@ -288,9 +325,19 @@
       </tr>
     </table>
 
-    <div class="center-image">
-      <img src='https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/Wiring Diagram.jpg?raw=true' alt="Wiring diagram of Jellybot electrical system">
+    <div class="image-row">
+      <div class="image-left">
+        <img src='https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/Wiring Diagram.jpg?raw=true' alt="Pressure Test Setup">
+      </div>
+      <div class="image-right">
+        <img src="images/pressure_gauge.png" alt="Pressure Gauge Reading">
+      </div>
     </div>
+
+<!-- Figure caption -->
+    <p class="figure-caption">
+      Figure 1. Wiring test setup (left) and gauge reading (right) used to measure actuator performance.
+    </p>
 
 
     <h2>4. Summary and Future Improvements</h2>
