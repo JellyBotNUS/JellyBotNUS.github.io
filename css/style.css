@@ -182,8 +182,7 @@ p {
 }
 
 .subsystem-description {
-  background-color: #001f3f; /* deep blue for oceanic feel */
-  color: white;
+  color: black;
   text-align: center;
   padding: 40px 60px;
   margin: 50px auto;
@@ -310,4 +309,5 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 
