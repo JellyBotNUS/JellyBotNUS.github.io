@@ -118,6 +118,35 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
+    .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+    
+      .styled-table th {
+        background-color: #0a3d62;
+        color: white;
+        padding: 10px;
+        border: 1px solid #333;
+      }
+    
+      .styled-table td {
+        border: 1px solid #333;
+        padding: 8px;
+        color: #333;
+      }
+    
+      .styled-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    
+      .styled-table tr:hover {
+        background-color: #dbe8f1;
+      }
+
   </style>
 </head>
 <body>
@@ -230,37 +259,6 @@
       The pressure values were measured using a digital barometric sensor connected to the actuator chamber. 
       Results indicate that increasing voltage and the number of active pumps significantly improves internal pressure generation, enhancing actuator performance.
     </p>
-    
-    <style>
-      .styled-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        text-align: center;
-        font-family: Arial, sans-serif;
-      }
-    
-      .styled-table th {
-        background-color: #0a3d62;
-        color: white;
-        padding: 10px;
-        border: 1px solid #333;
-      }
-    
-      .styled-table td {
-        border: 1px solid #333;
-        padding: 8px;
-        color: #333;
-      }
-    
-      .styled-table tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-    
-      .styled-table tr:hover {
-        background-color: #dbe8f1;
-      }
-    </style>
     
     <table class="styled-table">
       <tr>
