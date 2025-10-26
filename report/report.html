@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Report | Jellybot</title>
-
-  <!-- Link to external CSS -->
-  <link rel="stylesheet" href="../css/style.css" />
-
-  <!-- Shoelace UI for tree + dividers -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jellybot Report</title>
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 </head>
-
 <body>
-
-  <!-- ===== NAVIGATION ===== -->
+  <!-- Navigation -->
   <header>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-      <a href="report.html">Report</a>
+      <a href="/report.html">Report</a>
     </nav>
   </header>
 
-  <!-- ===== HERO SECTION ===== -->
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Final Year Project Report</h1>
     <p>Jellybot: Protecting the ocean with innovative robotics</p>
@@ -33,177 +27,162 @@
 
   <sl-divider></sl-divider>
 
-  <!-- ===== SUBSYSTEM OVERVIEW ===== -->
+  <!-- Subsystem Overview -->
   <section class="subsystem-overview">
     <div class="subsystem-header">
       <h2>Subsystem Overview</h2>
     </div>
-    <p>
-      The Jellybot consists of four main subsystems working harmoniously to achieve efficient, biomimetic underwater motion and data collection. Each subsystem focuses on a key aspect of performance — from structure and propulsion to control and electronics.
-    </p>
+    <p>The Jellybot is composed of four main subsystems that work together harmoniously to achieve efficient, biomimetic underwater motion and data collection. Each subsystem focuses on a critical aspect of design and performance — from structure and propulsion to control and electronics.</p>
   </section>
 
-  <div class="subsystems">
+  <!-- Subsystem Selection -->
+  <section class="subsystems">
     <a href="mechanical.html" class="cube">Mechanical</a>
     <a href="electrical.html" class="cube">Electrical</a>
     <a href="propulsion.html" class="cube">Propulsion</a>
     <a href="electronics.html" class="cube">Electronics</a>
-  </div>
+  </section>
 
   <sl-divider></sl-divider>
 
-  <!-- ===== TABLE OF CONTENTS ===== -->
-  <section class="table-of-content">
+  <!-- Table of Contents -->
+  <section class="table-of-content content-container">
     <h2>Table of Contents</h2>
     <sl-tree>
       <sl-tree-item expanded><a href="#section-1">1. Background</a></sl-tree-item>
       <sl-tree-item expanded>
         <a href="#section-2">2. Literature Review</a>
-        <sl-tree-item><a href="#section-2a">2.1 Introduction</a></sl-tree-item>
-        <sl-tree-item><a href="#section-2b">2.2 Case Study</a></sl-tree-item>
+        <sl-tree-item><a href="#sub-section-2a">2.1 Introduction</a></sl-tree-item>
+        <sl-tree-item><a href="#sub-section-2b">2.2 Case Study</a></sl-tree-item>
       </sl-tree-item>
-      <sl-tree-item><a href="#section-3">3. Problem Clarification</a></sl-tree-item>
+      <sl-tree-item expanded><a href="#section-3">3. Problem Clarification</a></sl-tree-item>
       <sl-tree-item expanded>
         <a href="#section-4">4. Value Proposition</a>
-        <sl-tree-item><a href="#section-4a">4.1 Value Proposition Table</a></sl-tree-item>
-        <sl-tree-item><a href="#section-4b">4.2 Comparison of Methods</a></sl-tree-item>
-        <sl-tree-item><a href="#section-4c">4.3 Value Proposition Statement</a></sl-tree-item>
+        <sl-tree-item><a href="#sub-section-4a">4.1 Value Proposition Table</a></sl-tree-item>
+        <sl-tree-item><a href="#sub-section-4b">4.2 Comparison of Coral Reef Data Collection Methods</a></sl-tree-item>
+        <sl-tree-item><a href="#sub-section-4c">4.3 Value Proposition Statement</a></sl-tree-item>
       </sl-tree-item>
-      <sl-tree-item><a href="#section-5">5. User Journey</a></sl-tree-item>
-      <sl-tree-item><a href="#section-6">6. Features & Specifications</a></sl-tree-item>
+      <sl-tree-item expanded><a href="#section-5">5. User Journey</a></sl-tree-item>
+      <sl-tree-item expanded><a href="#section-6">6. Features and Specifications</a></sl-tree-item>
       <sl-tree-item><a href="#references">References</a></sl-tree-item>
     </sl-tree>
   </section>
 
   <sl-divider></sl-divider>
 
-  <!-- ===== SECTION 1: BACKGROUND ===== -->
-  <section id="section-1" class="content-container">
-    <h2>1. Background</h2>
-    <p><strong>Importance of Coral Reefs:</strong><br>
-      Coral reefs are among the most species-rich ecosystems on Earth. They provide food, coastal protection, and habitat for marine life, yet are under severe threat from climate change, pollution, and human interference.
-    </p>
-
-    <div class="center-image">
-      <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/CoralReef.jpg?raw=true" alt="Coral Reef Ecosystem" />
-      <p class="figure-caption">Figure 1: Coral reefs as essential marine habitats.</p>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 2: LITERATURE REVIEW ===== -->
-  <section id="section-2" class="content-container">
-    <h2>2. Literature Review</h2>
-
-    <div id="section-2a">
-      <h3 class="subsection">2.1 Introduction</h3>
-      <p>
-        Defining a value proposition is an essential step in identifying how technology can address critical environmental challenges. Existing underwater robotics platforms demonstrate various methods of propulsion and data collection, but few balance environmental sensitivity with efficiency.
-      </p>
-    </div>
-
-    <div id="section-2b">
-      <h3 class="subsection">2.2 Case Study</h3>
-      <p>
-        Research on biomimetic propulsion mechanisms has led to innovative underwater robots inspired by jellyfish motion. Such designs offer low-noise and energy-efficient movement — ideal for marine research without disturbing ecosystems.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 3: PROBLEM CLARIFICATION ===== -->
-  <section id="section-3" class="content-container">
-    <h2>3. Problem Clarification</h2>
-    <p>
-      Underwater ecosystems such as coral reefs face significant monitoring challenges due to the cost and complexity of traditional AUVs. JellyBot seeks to address this by offering a low-cost, environmentally friendly robotic solution capable of agile, non-intrusive underwater navigation.
-    </p>
-  </section>
-
-  <!-- ===== SECTION 4: VALUE PROPOSITION ===== -->
-  <section id="section-4" class="content-container">
-    <h2>4. Value Proposition</h2>
-
-    <div id="section-4a">
-      <h3 class="subsection">4.1 Value Proposition Table</h3>
+  <!-- Sections -->
+  <div class="content-container">
+    <!-- Section 1 -->
+    <section id="section-1">
+      <h2>1. Background</h2>
+      <p><strong>Importance of coral reefs:</strong> Coral reefs are the most species-rich ecosystems in the ocean... </p>
       <div class="center-image">
-        <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/ValuePropositionTable.png?raw=true" alt="Value Proposition Table" />
+        <img src="https://via.placeholder.com/600x300" alt="Figure 1">
+        <p class="figure-caption">Figure 1</p>
       </div>
-    </div>
+      <p><strong>Status and pressures:</strong> Reefs are also among the ecosystems most exposed to human pressures...</p>
+      <div class="center-image">
+        <img src="https://via.placeholder.com/600x300" alt="Figure 2">
+        <p class="figure-caption">Figure 2</p>
+      </div>
+      <p>As coral cover drops... </p>
+      <div class="center-image">
+        <img src="https://via.placeholder.com/600x300" alt="Figure 3">
+        <p class="figure-caption">Figure 3</p>
+      </div>
+      <p><strong>Why this matters:</strong> Coral reefs lie at the intersection of today’s three interconnected environmental crises...</p>
+    </section>
 
-    <div id="section-4b">
-      <h3 class="subsection">4.2 Comparison of Methods</h3>
-      <table class="styled-table">
-        <thead>
-          <tr>
-            <th>Method</th>
-            <th>Energy Efficiency</th>
-            <th>Environmental Impact</th>
-            <th>Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Traditional AUV</td>
-            <td>Moderate</td>
-            <td>Medium</td>
-            <td>High</td>
-          </tr>
-          <tr>
-            <td>Remotely Operated Vehicle (ROV)</td>
-            <td>Low</td>
-            <td>Medium</td>
-            <td>Medium</td>
-          </tr>
-          <tr>
-            <td>JellyBot (Proposed)</td>
-            <td>High</td>
-            <td>Low</td>
-            <td>Low</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- Section 2 -->
+    <section id="section-2">
+      <h2>2. Literature Review</h2>
+      <p>Defining a value proposition is an essential step in clarifying why a product is relevant...</p>
 
-    <div id="section-4c">
-      <h3 class="subsection">4.3 Value Proposition Statement</h3>
-      <p>
-        Our jellyfish-inspired underwater robot, JellyBot, empowers marine researchers with a sustainable and affordable platform for long-duration ocean monitoring — minimizing environmental disruption while maximizing data insight.
-      </p>
-    </div>
-  </section>
+      <div id="sub-section-2a">
+        <h3 class="subsection">2.1 Introduction</h3>
+        <p>Content for sub-section 2A...</p>
+      </div>
+      <div id="sub-section-2b">
+        <h3 class="subsection">2.2 Case Study</h3>
+        <p>Our jellyfish-inspired underwater robot helps marine researchers and ecologists...</p>
+      </div>
+    </section>
 
-  <!-- ===== SECTION 5: USER JOURNEY ===== -->
-  <section id="section-5" class="content-container">
-    <h2>5. User Journey</h2>
-    <p>
-      The JellyBot user journey emphasizes simplicity — from deployment to data collection. Operators can easily release the robot, collect sensor data autonomously, and retrieve insights through wireless transfer upon retrieval.
-    </p>
+    <!-- Section 3 -->
+    <section id="section-3">
+      <h2>3. Problem Clarification</h2>
+      <p><strong>Problem Clarification:</strong> Underwater ecosystems such as coral reefs are highly fragile...</p>
+      <p><strong>Problem Statement:</strong> Traditional underwater exploration methods...</p>
+      <p><strong>How Might We Framework:</strong> To reframe the design challenge into actionable opportunities...</p>
+    </section>
 
-    <div class="center-image">
-      <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/UserJourney.png?raw=true" alt="User Journey Diagram" />
-      <p class="figure-caption">Figure 2: Simplified JellyBot user journey.</p>
-    </div>
-  </section>
+    <!-- Section 4 -->
+    <section id="section-4">
+      <h2>4. Value Proposition</h2>
+      <p>Defining a value proposition is an essential step in clarifying why a product is relevant...</p>
 
-  <!-- ===== SECTION 6: FEATURES & SPECIFICATIONS ===== -->
-  <section id="section-6" class="content-container">
-    <h2>6. Features & Specifications</h2>
-    <p>
-      JellyBot incorporates lightweight mechanical components, low-power electronics, and a flexible propulsion system. Its modular design allows customization for different marine research purposes.
-    </p>
-  </section>
+      <div id="sub-section-4a" class="center-image">
+        <h3>4.1 Value Proposition Table</h3>
+        <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/ValuePropositionTable.png?raw=true" alt="Value Proposition Table">
+      </div>
 
-  <!-- ===== REFERENCES ===== -->
+      <div id="sub-section-4b">
+        <h3>4.2 Comparison of Coral Reef Data Collection Methods in Singapore</h3>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Traditional Diver Survey</th>
+              <th>Commercial ROVs</th>
+              <th>JellyBot (Proposed System)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Personnel Required</td><td>2–3 trained divers, 1 boat operator</td><td>1–2 ROV operators, 1 boat operator</td><td>1 operator (shore or boat-based)</td></tr>
+            <tr><td>Initial Equipment Cost</td><td>Diving equipment ≈ $5,000</td><td>ROV unit $20,000–$60,000</td><td>JellyBot prototype ($800–$1,200)</td></tr>
+            <tr><td>Operation Depth</td><td>More than 30 m</td><td>Up to 100 m</td><td>0–20 m (reef zone)</td></tr>
+            <tr><td>Survey Duration</td><td>45–50 min</td><td>3–6 h continuous</td><td>3–4 h continuous</td></tr>
+            <tr><td>Environmental Impact</td><td>Moderate (diver movement disturbs sediment and coral)</td><td>Moderate (propeller turbulence)</td><td>Minimal (soft-body propulsion)</td></tr>
+            <tr><td>Data Collection Frequency</td><td>Monthly or quarterly</td><td>Weekly</td><td>Continuous or autonomous</td></tr>
+            <tr><td>Ideal Use Case</td><td>Close visual inspection, species identification</td><td>Deep-water imaging, industrial inspection</td><td>Long-term shallow reef monitoring</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="sub-section-4c">
+        <h3>4.3 Value Proposition Statement</h3>
+        <p>Our jellyfish-inspired underwater robot, JellyBot, helps marine researchers and ecologists in Singapore...</p>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="section-5">
+      <h2>5. User Journey</h2>
+      <p><strong>JellyBot User Journey:</strong> The Jellybot user journey is structured based on key principles from Nielsen Norman Group’s Journey Mapping 101...</p>
+      <div class="center-image">
+        <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/UserJourney.png?raw=true" alt="JellyBot User Journey">
+      </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="section-6">
+      <h2>6. Features and Specifications</h2>
+      <p><strong>Design Specification Table:</strong> Coral reefs are the most species-rich ecosystems in the ocean...</p>
+    </section>
+  </div>
+
+  <!-- References -->
   <section id="references" class="content-container">
     <h2>References</h2>
     <ul>
-      <li>Brody, J. E. (2007). Mental reserves keep brain agile. *The New York Times.*</li>
-      <li>Chamberlin, J. et al. (2008). Enhancing worker well-being. *American Psychological Association.*</li>
+      <li>Brody, J. E. (2007). Mental reserves keep brain agile.</li>
+      <li>Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008). Enhancing worker well-being.</li>
     </ul>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Jellybot Project. All rights reserved.</p>
+    <p>© 2025 Jellybot Project</p>
   </footer>
-
 </body>
 </html>
