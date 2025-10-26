@@ -1,389 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jellybot Report</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report | Jellybot</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Shoelace UI for tree + dividers -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 </head>
+
 <body>
-  <!-- Navigation -->
+
+  <!-- ===== NAVIGATION ===== -->
   <header>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-      <a href="/report.html">Report</a>
+      <a href="report.html">Report</a>
     </nav>
   </header>
 
-  <!-- Report Title -->
+  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <h1>Final Year Project Report</h1>
-    <p style="text-align:center; color:white;">Jellybot: Protecting the ocean with innovative robotics</p>
+    <p>Jellybot: Protecting the ocean with innovative robotics</p>
   </section>
 
   <sl-divider></sl-divider>
 
-<!-- Subsystem Overview -->
-<section class="subsystem-overview">
-  <div class="subsystem-header">
-    <h2>Subsystem Overview</h2>
-  </div>
-</section>
+  <!-- ===== SUBSYSTEM OVERVIEW ===== -->
+  <section class="subsystem-overview">
+    <div class="subsystem-header">
+      <h2>Subsystem Overview</h2>
+    </div>
+    <p>
+      The Jellybot consists of four main subsystems working harmoniously to achieve efficient, biomimetic underwater motion and data collection. Each subsystem focuses on a key aspect of performance — from structure and propulsion to control and electronics.
+    </p>
+  </section>
 
-  <!-- Subsystem Selection -->
-  <section class="subsystems">
+  <div class="subsystems">
     <a href="mechanical.html" class="cube">Mechanical</a>
     <a href="electrical.html" class="cube">Electrical</a>
     <a href="propulsion.html" class="cube">Propulsion</a>
     <a href="electronics.html" class="cube">Electronics</a>
-  </section>
-  
-  <!-- Subsystem Description -->
-  <section class="subsystem-description">
-    <p>
-      The Jellybot is composed of four main subsystems that work together harmoniously 
-      to achieve efficient, biomimetic underwater motion and data collection. 
-      Each subsystem focuses on a critical aspect of design and performance — 
-      from structure and propulsion to control and electronics.
-    </p>
-  </section>
+  </div>
 
   <sl-divider></sl-divider>
 
-  <!-- Table of Contents -->
-  <section class="table-of-content content-container">
+  <!-- ===== TABLE OF CONTENTS ===== -->
+  <section class="table-of-content">
     <h2>Table of Contents</h2>
     <sl-tree>
-      <sl-tree-item expanded>
-        <a href="#section-1">1. Background</a>
-      </sl-tree-item>
+      <sl-tree-item expanded><a href="#section-1">1. Background</a></sl-tree-item>
       <sl-tree-item expanded>
         <a href="#section-2">2. Literature Review</a>
-        <sl-tree-item><a href="#sub-section-2a">2.1 Introduction</a></sl-tree-item>
-        <sl-tree-item><a href="#sub-section-2b">2.2 Case Study</a></sl-tree-item>
+        <sl-tree-item><a href="#section-2a">2.1 Introduction</a></sl-tree-item>
+        <sl-tree-item><a href="#section-2b">2.2 Case Study</a></sl-tree-item>
       </sl-tree-item>
-      <sl-tree-item expanded>
-      <a href="#section-3">3. Problem Clarification</a>
-      </sl-tree-item>
+      <sl-tree-item><a href="#section-3">3. Problem Clarification</a></sl-tree-item>
       <sl-tree-item expanded>
         <a href="#section-4">4. Value Proposition</a>
-        <sl-tree-item><a href="#sub-section-4a">4.1 Value Proposition Table </a></sl-tree-item>
-        <sl-tree-item><a href="#sub-section-4b">4.2 Comparison of Coral Reef Data Collection Methods and Costs in Singapore</a></sl-tree-item>
-        <sl-tree-item><a href="#sub-section-4c">4.2 Value Proposition Statement</a></sl-tree-item>
+        <sl-tree-item><a href="#section-4a">4.1 Value Proposition Table</a></sl-tree-item>
+        <sl-tree-item><a href="#section-4b">4.2 Comparison of Methods</a></sl-tree-item>
+        <sl-tree-item><a href="#section-4c">4.3 Value Proposition Statement</a></sl-tree-item>
       </sl-tree-item>
-      <sl-tree-item expanded>
-      <a href="#section-5">5. User Journey</a>
-      </sl-tree-item>
-      <sl-tree-item expanded>
-      <a href="#section-6">6. Features and Specifications</a>
-      </sl-tree-item>
-      <sl-tree-item>
-      <a href="#references">References</a>
-      </sl-tree-item>
+      <sl-tree-item><a href="#section-5">5. User Journey</a></sl-tree-item>
+      <sl-tree-item><a href="#section-6">6. Features & Specifications</a></sl-tree-item>
+      <sl-tree-item><a href="#references">References</a></sl-tree-item>
     </sl-tree>
   </section>
 
   <sl-divider></sl-divider>
 
-  <!-- Sections -->
-  <div class="content-container">
-    <section id="section-1">
-      <h2>1. Background</h2>
+  <!-- ===== SECTION 1: BACKGROUND ===== -->
+  <section id="section-1" class="content-container">
+    <h2>1. Background</h2>
+    <p><strong>Importance of Coral Reefs:</strong><br>
+      Coral reefs are among the most species-rich ecosystems on Earth. They provide food, coastal protection, and habitat for marine life, yet are under severe threat from climate change, pollution, and human interference.
+    </p>
 
-      <p><strong>Importance of coral reefs:</strong><br>
-      Coral reefs are the most species-rich ecosystems in the ocean. Although they occur across more than one hundred countries and occupy well under 1% of the seafloor, their intricate, three-dimensional frameworks provide habitat, nursery grounds, and feeding areas for roughly a quarter of described marine species. 
-      This biological richness translates into substantial human benefits: reef fisheries and tourism support livelihoods, reef crests dissipate wave energy and reduce flooding, and bioprospecting has yielded medically relevant compounds. 
-      Recent global assessments estimate the combined value of these services at around US$2.7 trillion per year (GCRMN, 2020).</p>
+    <div class="center-image">
+      <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/CoralReef.jpg?raw=true" alt="Coral Reef Ecosystem" />
+      <p class="figure-caption">Figure 1: Coral reefs as essential marine habitats.</p>
+    </div>
+  </section>
 
-      <p><strong>Status and pressures:</strong><br>
-      Reefs are also among the ecosystems most exposed to human pressures. The IPCC (2019) identifies coral reefs as the marine system at highest risk from climate change—particularly marine heatwaves and stronger storms—compounded by ocean acidification. 
-      Local stressors exacerbate these impacts: nutrient and sediment runoff, marine pollution, and overfishing (including destructive methods) all erode reef condition and resilience.</p>
+  <!-- ===== SECTION 2: LITERATURE REVIEW ===== -->
+  <section id="section-2" class="content-container">
+    <h2>2. Literature Review</h2>
 
-      <p><em>Figure 1</em></p>
+    <div id="section-2a">
+      <h3 class="subsection">2.1 Introduction</h3>
+      <p>
+        Defining a value proposition is an essential step in identifying how technology can address critical environmental challenges. Existing underwater robotics platforms demonstrate various methods of propulsion and data collection, but few balance environmental sensitivity with efficiency.
+      </p>
+    </div>
 
-      <p>Consistent with these risks, four decades of monitoring synthesized by the Global Coral Reef Monitoring Network indicate persistent declines in live hard-coral cover. 
-      Between 2009 and 2018 alone, successive mass-bleaching events linked to warming caused an estimated 14% loss of coral cover worldwide—greater than the total coral currently found on Australia’s reefs (GCRMN, 2020).</p>
+    <div id="section-2b">
+      <h3 class="subsection">2.2 Case Study</h3>
+      <p>
+        Research on biomimetic propulsion mechanisms has led to innovative underwater robots inspired by jellyfish motion. Such designs offer low-noise and energy-efficient movement — ideal for marine research without disturbing ecosystems.
+      </p>
+    </div>
+  </section>
 
-      <p><em>Figure 2</em></p>
+  <!-- ===== SECTION 3: PROBLEM CLARIFICATION ===== -->
+  <section id="section-3" class="content-container">
+    <h2>3. Problem Clarification</h2>
+    <p>
+      Underwater ecosystems such as coral reefs face significant monitoring challenges due to the cost and complexity of traditional AUVs. JellyBot seeks to address this by offering a low-cost, environmentally friendly robotic solution capable of agile, non-intrusive underwater navigation.
+    </p>
+  </section>
 
-      <p>As coral cover drops and structural complexity flattens, competitive balance shifts toward fleshy algae, especially where herbivory is depleted or water quality is poor; global datasets show algal cover increasing over the same period.</p>
+  <!-- ===== SECTION 4: VALUE PROPOSITION ===== -->
+  <section id="section-4" class="content-container">
+    <h2>4. Value Proposition</h2>
 
-      <p><em>Figure 3</em></p>
-
-      <p>These community changes reduce biodiversity and weaken the delivery of ecosystem services—lower and less stable fisheries yields, diminished tourism appeal, and reduced natural coastal protection. 
-      Despite these trends, recovery is possible. Many reefs can rebound from bleaching and storm damage when stressors abate, particularly where water quality is high, herbivorous fish populations are intact, and recovery windows between heat events are sufficiently long.</p>
-
-      <p><strong>Why this matters:</strong><br>
-      Coral reefs lie at the intersection of today’s three interconnected environmental crises: biodiversity loss, climate change, and pollution. 
-      Even if global warming is limited to 1.5 °C, prolonged heat stress is projected to put the vast majority of reefs at risk by mid-century. 
-      The consequences extend beyond species loss: hundreds of millions of people—especially in least-developed countries, economies in transition, and small island developing states—depend on reefs for food security, income, cultural identity, and coastal safety. 
-      Safeguarding live coral cover and preserving the structural complexity of reefs is therefore both an ecological and a human development priority.</p>
-    </section>
-
-      <section id="section-2">
-      <h2>2. Literature Review</h2>
-      <p>Defining a value proposition is an essential step in clarifying why a product is relevant, 
-        how it stands out from existing alternatives, and why key stakeholders should adopt it. Unlike technical specifications, 
-        the value proposition highlights both tangible and intangible benefits, making it compelling for end users..</p>
-
-      <div id="sub-section-2a">
-        <h3 class="subsection" style="margin-top:40px;">2.1 Introduction</h3>
-        <p>Content for sub-section 2A...</p>
+    <div id="section-4a">
+      <h3 class="subsection">4.1 Value Proposition Table</h3>
+      <div class="center-image">
+        <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/ValuePropositionTable.png?raw=true" alt="Value Proposition Table" />
       </div>
-      <div id="sub-section-2b">
-        <h3 class="subsection" style="margin-top:40px;">2.2 Case Study</h3>
-        <p>Our jellyfish-inspired underwater robot helps marine researchers and ecologists who want to observe and capture data on marine life 
-          in fragile ecosystems by providing compact, silent, and biomimetic propulsion and minimizing disturbance to natural behavior.
-          Unlike traditional ROVs or human divers, it enables unobtrusive, energy-efficient exploration in shallow and complex reef environments..</p>
-      </div>
-    </section>
-    
-    <section id="section-3">
-      <h2>3. Problem Clarification</h2>
+    </div>
 
-      <p><strong>Problem Clarification</strong><br>
-      Underwater ecosystems such as coral reefs are highly fragile and easily disturbed by conventional exploration methods. Traditional approaches involving divers or remotely operated vehicles (ROVs) face several limitations that compromise both cost-efficiency and ecological safety. 
-        Bulky ROVs struggle with maneuverability in narrow reef passages and shallow coastal zones, while propeller-driven systems generate noise and turbulence that can damage delicate coral structures. Diver-based surveys, on the other hand, demand extensive logistical support—trained personnel, safety teams, oxygen supplies, and large research vessels—resulting in high operational costs and time constraints, often amounting to hundreds to thousands of dollars per mission. 
-        Moreover, diver interactions pose direct risks to coral health; 
-        studies have shown that 94% of divers make contact with reef substrates, averaging 16 contacts every 10 minutes, with 66% causing visible coral damage (Worachananant et al., 2008). These findings highlight the need for an alternative exploration method that is compact, quiet, energy-efficient, and minimally invasive. Inspired by the gentle propulsion of jellyfish, 
-        biomimetic robots like JellyBot offer a promising solution—utilizing soft, pulsatile locomotion that mimics natural movement to enable low-energy, silent, and ecologically responsible underwater exploration without disrupting fragile marine ecosystems.</p>
+    <div id="section-4b">
+      <h3 class="subsection">4.2 Comparison of Methods</h3>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Energy Efficiency</th>
+            <th>Environmental Impact</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Traditional AUV</td>
+            <td>Moderate</td>
+            <td>Medium</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Remotely Operated Vehicle (ROV)</td>
+            <td>Low</td>
+            <td>Medium</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>JellyBot (Proposed)</td>
+            <td>High</td>
+            <td>Low</td>
+            <td>Low</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-      <p><strong>Problem Statement</strong><br>
-      Traditional underwater exploration methods—such as human divers or remotely operated vehicles (ROVs)—often disturb delicate marine ecosystems and are constrained by size, noise, and maneuverability limitations. Divers and ROVs can unintentionally damage fragile coral structures through turbulence or direct contact, 
-        while diver-based surveys remain costly, manpower-intensive, and limited by dive duration and safety constraints. These challenges highlight the need for a compact, silent, and biomimetic underwater robot capable of navigating complex reef structures 
-        and shallow coastal environments to capture ecological data without disrupting marine life. The JellyBot aims to address this issue by mimicking the gentle, pulsatile propulsion of jellyfish, enabling precise, energy-efficient, 
-        and unobtrusive exploration that supports ecological research and long-term conservation efforts in a sustainable and responsible manner.</p>
+    <div id="section-4c">
+      <h3 class="subsection">4.3 Value Proposition Statement</h3>
+      <p>
+        Our jellyfish-inspired underwater robot, JellyBot, empowers marine researchers with a sustainable and affordable platform for long-duration ocean monitoring — minimizing environmental disruption while maximizing data insight.
+      </p>
+    </div>
+  </section>
 
-      <p><strong>How Might We Framework</strong><br>
-     To reframe the design challenge into actionable opportunities, the How Might We (HMW) framework was applied to guide the ideation process and ensure alignment between technological innovation and ecological responsibility. 
-        Key guiding questions include: How might we create an underwater robot that moves quietly and naturally to avoid disturbing marine life?; How might we design a compact system capable of navigating confined and shallow reef environments?; 
-        and How might we apply biomimicry to achieve efficient propulsion with minimal energy consumption? Additional questions explore how we might enable long-duration ecological monitoring without human intervention, 
-        how we might ensure high-quality data and footage capture while remaining unobtrusive, and how we might develop a cost-efficient solution that reduces reliance on expensive diver or ROV operations. 
-        By structuring the challenge through these questions, the project team can focus on developing innovative, sustainable, and affordable solutions that not only address technical feasibility but also advance marine research and conservation goals in an ecologically responsible manner.</p>
-    </section>
+  <!-- ===== SECTION 5: USER JOURNEY ===== -->
+  <section id="section-5" class="content-container">
+    <h2>5. User Journey</h2>
+    <p>
+      The JellyBot user journey emphasizes simplicity — from deployment to data collection. Operators can easily release the robot, collect sensor data autonomously, and retrieve insights through wireless transfer upon retrieval.
+    </p>
 
-    <section id="section-4">
-      <h2>4. Value Preposition</h2>
-      <p>Defining a value proposition is an essential step in clarifying why a product is relevant, 
-        how it stands out from existing alternatives, and why key stakeholders should adopt it. Unlike technical specifications, 
-        the value proposition highlights both tangible and intangible benefits, making it compelling for end users..</p>
+    <div class="center-image">
+      <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/UserJourney.png?raw=true" alt="User Journey Diagram" />
+      <p class="figure-caption">Figure 2: Simplified JellyBot user journey.</p>
+    </div>
+  </section>
 
+  <!-- ===== SECTION 6: FEATURES & SPECIFICATIONS ===== -->
+  <section id="section-6" class="content-container">
+    <h2>6. Features & Specifications</h2>
+    <p>
+      JellyBot incorporates lightweight mechanical components, low-power electronics, and a flexible propulsion system. Its modular design allows customization for different marine research purposes.
+    </p>
+  </section>
 
-      <div id="sub-section-4a">
-      <h2>4.1 Value Proposition Table</h2>
-     <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/ValuePropositionTable.png?raw=true'" alt="Value Proposition Table">
-
-      <div id="sub-section-4b">
-        <section class="content-container">
-          <h2>4.2 Comparison of Coral Reef Data Collection Methods in Singapore</h2>
-        
-          <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: left;">
-            <thead style="background-color: #0a3d62; color: white;">
-              <tr>
-                <th style="padding: 12px; border: 1px solid #ddd;">Category</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">Traditional Diver Survey</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">Commercial ROVs</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">JellyBot (Proposed System)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;">Personnel Required</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">2–3 trained divers, 1 boat operator</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">1–2 ROV operators, 1 boat operator</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">1 operator (shore or boat-based)</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;">Initial Equipment Cost</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Diving equipment ≈ $5,000</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">ROV unit $20,000–$60,000</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">JellyBot prototype ($800–$1,200)</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;">Operation Depth</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">More than 30 m</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Up to 100 m</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">0–20 m (reef zone)</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;">Survey Duration</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">45–50 min</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">3–6 h continuous</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">3–4 h continuous</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;">Environmental Impact</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Moderate (diver movement disturbs sediment and coral)</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Moderate (propeller turbulence)</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Minimal (soft-body propulsion)</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;">Data Collection Frequency</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Monthly or quarterly</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Weekly</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Continuous or autonomous</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;">Ideal Use Case</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Close visual inspection, species identification</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Deep-water imaging, industrial inspection</td>
-                <td style="padding: 10px; border: 1px solid #ddd;">Long-term shallow reef monitoring</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="content-container">
-          <h2>Cost Breakdown and Calculation (Singapore Context)</h2>
-        
-          <table style="width:100%; border-collapse: collapse; margin-top: 20px; font-family: Arial, sans-serif; text-align: left;">
-            <thead style="background-color: #0a3d62; color: white;">
-              <tr>
-                <th style="padding: 12px; border: 1px solid #ddd;">Component</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">Cost</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">Quantity</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">Total (SGD)</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">Yearly Total (SGD)</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">References</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Traditional Diver -->
-              <tr style="background-color:#dbe9f4;">
-                <td colspan="6" style="padding:10px; border:1px solid #ddd; font-weight:bold;">Traditional Diver</td>
-              </tr>
-              <tr>
-                <td style="padding:10px; border:1px solid #ddd;">Research Boat Charter</td>
-                <td style="padding:10px; border:1px solid #ddd;">$1500/day</td>
-                <td style="padding:10px; border:1px solid #ddd;">12 trips/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">$18,100/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">$35,020</td>
-                <td style="padding:10px; border:1px solid #ddd;">
-                  <a href="https://sjinml.nus.edu.sg/pricing-and-charges/?utm_source=chatgpt.com" target="_blank">SJINML Pricing</a>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:10px; border:1px solid #ddd;">Diver Manpower</td>
-                <td style="padding:10px; border:1px solid #ddd;">$300/day × 3 divers</td>
-                <td style="padding:10px; border:1px solid #ddd;">12 trips/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">$10,800/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">—</td>
-                <td style="padding:10px; border:1px solid #ddd;">—</td>
-              </tr>
-              <tr>
-                <td style="padding:10px; border:1px solid #ddd;">Equipment Rental (Scuba + Camera)</td>
-                <td style="padding:10px; border:1px solid #ddd;">$170/day × 3 divers</td>
-                <td style="padding:10px; border:1px solid #ddd;">12 trips/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">$6,120</td>
-                <td style="padding:10px; border:1px solid #ddd;">—</td>
-                <td style="padding:10px; border:1px solid #ddd;">
-                  <a href="https://scubawarehouse.com.sg/scuba-gear-rental/?srsltid=AfmBOopHPbeGD7yiVyNPFnPttTHidYbkZYy0CS9CSZP_v7a3uVkP63fc" target="_blank">Scuba Warehouse</a>
-                </td>
-              </tr>
-        
-              <!-- Commercial ROV -->
-              <tr style="background-color:#dbe9f4;">
-                <td colspan="6" style="padding:10px; border:1px solid #ddd; font-weight:bold;">Commercial ROV</td>
-              </tr>
-              <tr>
-                <td style="padding:10px; border:1px solid #ddd;">ROV Unit</td>
-                <td style="padding:10px; border:1px solid #ddd;">$5,300</td>
-                <td style="padding:10px; border:1px solid #ddd;">1 unit</td>
-                <td style="padding:10px; border:1px solid #ddd;">$5,300 (initial)</td>
-                <td style="padding:10px; border:1px solid #ddd;">$23,400</td>
-                <td style="padding:10px; border:1px solid #ddd;">
-                  <a href="https://bluerobotics.com/store/rov/bluerov2/" target="_blank">Blue Robotics</a>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:10px; border:1px solid #ddd;">Research Boat Charter</td>
-                <td style="padding:10px; border:1px solid #ddd;">$1500/day</td>
-                <td style="padding:10px; border:1px; border:1px solid #ddd;">12 trips/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">$18,100/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">—</td>
-                <td style="padding:10px; border:1px solid #ddd;">
-                  <a href="https://sjinml.nus.edu.sg/pricing-and-charges/?utm_source=chatgpt.com" target="_blank">SJINML Pricing</a>
-                </td>
-              </tr>
-        
-              <!-- JellyBot -->
-              <tr style="background-color:#dbe9f4;">
-                <td colspan="6" style="padding:10px; border:1px solid #ddd; font-weight:bold;">JellyBot</td>
-              </tr>
-              <tr>
-                <td style="padding:10px; border:1px solid #ddd;">JellyBot Prototype</td>
-                <td style="padding:10px; border:1px solid #ddd;">$1,000</td>
-                <td style="padding:10px; border:1px solid #ddd;">1 unit</td>
-                <td style="padding:10px; border:1px solid #ddd;">$1,000 (initial)</td>
-                <td style="padding:10px; border:1px solid #ddd;">$19,000</td>
-                <td style="padding:10px; border:1px solid #ddd;">—</td>
-              </tr>
-              <tr>
-                <td style="padding:10px; border:1px solid #ddd;">Research Boat Charter</td>
-                <td style="padding:10px; border:1px solid #ddd;">$1500/day</td>
-                <td style="padding:10px; border:1px solid #ddd;">12 trips/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">$18,100/year</td>
-                <td style="padding:10px; border:1px solid #ddd;">—</td>
-                <td style="padding:10px; border:1px solid #ddd;">
-                  <a href="https://sjinml.nus.edu.sg/pricing-and-charges/?utm_source=chatgpt.com" target="_blank">SJINML Pricing</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <p><strong>Interpretation of Cost and Method Comparison</strong><br>
-        <p>The cost and method comparison show that JellyBot is a far more affordable and sustainable solution for coral reef monitoring in Singapore compared to traditional diver surveys and commercial ROVs. Diver-based methods cost around SGD 35,000 annually due to frequent boat rentals, manpower, and equipment, while ROVs, though safer and capable of deeper dives, require a high initial investment of SGD 20,000–60,000 and constant operator supervision. In contrast, JellyBot offers a low-cost alternative at about SGD 1,000, operating autonomously in shallow reefs with minimal environmental impact. Its soft propulsion and long-term deployment potential make it ideal for frequent, low-maintenance reef monitoring, reducing both human involvement and operational costs while enhancing ecological safety.</p>
-        
-      </div>
-      <div id="sub-section-4c">
-        <h3>4.3 Value Preposition Statement</h3>
-        <p>Our jellyfish-inspired underwater robot, JellyBot, helps marine researchers and ecologists in Singapore who need to observe and capture data on fragile coral reef ecosystems by offering compact, silent, and biomimetic propulsion that minimizes disturbance to marine life. Unlike traditional ROVs or human divers, JellyBot provides unobtrusive, energy-efficient, and cost-effective exploration in shallow and complex reef environments, enabling more frequent and sustainable data collection.</p>
-      </div>
-    </section>
-
-    <section id="section-5">
-      <h2>5. User Journey</h2>
-
-      <p><strong>JellyBot User Journey</strong></strong><br>
-      The Jellybot user journey is structured based on the key principles from Nielsen Norman Group’s Journey Mapping 101, which focuses on understanding the user’s actions, thoughts, and emotions throughout an experience.
-      
-      <p>In this project, the journey represents the process a marine researcher goes through when operating Jellybot — from preparation on the boat to underwater deployment, control, data collection, and retrieval. Each phase outlines the user’s actions, mindset, and emotions, illustrating how Jellybot enables a smooth and reliable operation. The experience moves from anticipation during setup, to concentration and satisfaction during underwater exploration, and finally to a sense of accomplishment after successful data collection.</p>
-
-      <img src="https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/UserJourney.png?raw=true'" alt="JellyBot User Journey">
-
-
-       </section>
-
-      <section id="section-6">
-      <h2>6. Feature and Specifications</h2>
-
-      <p><strong>Design Specification Table</strong><br>
-      Coral reefs are the most species-rich ecosystems in the ocean. Although they occur across more than one hundred countries and occupy well under 1% of the seafloor, their intricate, three-dimensional frameworks provide habitat, nursery grounds, and feeding areas for roughly a quarter of described marine species. 
-      This biological richness translates into substantial human benefits: reef fisheries and tourism support livelihoods, reef crests dissipate wave energy and reduce flooding, and bioprospecting has yielded medically relevant compounds. 
-      Recent global assessments estimate the combined value of these services at around US$2.7 trillion per year (GCRMN, 2020).</p>
-    </section>
-     
-
-  </div>
-
-
-  <!-- References -->
+  <!-- ===== REFERENCES ===== -->
   <section id="references" class="content-container">
     <h2>References</h2>
     <ul>
-      <li>Brody, J. E. (2007). Mental reserves keep brain agile.</li>
-      <li>Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008). Enhancing worker well-being.</li>
+      <li>Brody, J. E. (2007). Mental reserves keep brain agile. *The New York Times.*</li>
+      <li>Chamberlin, J. et al. (2008). Enhancing worker well-being. *American Psychological Association.*</li>
     </ul>
   </section>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p style="text-align:center; color:white;">© 2025 Jellybot Project</p>
+    <p>© 2025 Jellybot Project. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
