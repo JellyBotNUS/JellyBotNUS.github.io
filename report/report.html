@@ -286,6 +286,7 @@
 	<div>
 		<table class="styled-table">
 		  <tr>
+			<th>Titles</th>
 		    <th>Features</th>
 		    <th>Target Value / Description</th>
 		    <th>Purposes / Rationale</th>
@@ -294,7 +295,8 @@
 		
 		  <!-- Depth -->
 		  <tr>
-		    <td>1. Depth<br><small>(Working Depth)</small></td>
+		    <td>1. Depth</td>
+			<td>Working Depth</td>td>
 		    <td>10 m</td>
 		    <td>
 		      Coral targets typically occur around 10 m in shallow water.<br>
@@ -311,7 +313,8 @@
 		  <!-- Housing Vessel section -->
 		  <tr>
 		    <td rowspan="3">2. Housing Vessel</td>
-		    <td><strong>a. Pressure Tolerance</strong><br>1.96 – 2 atm of pressure</td>
+		    <td>a. Pressure Tolerance</td>
+			<td>1.96 – 2 atm of pressure</td>
 		    <td>
 		      Safety protection against equipment and manufacturing tolerance.<br><br>
 		      <strong>Calculation:</strong><br>
@@ -328,7 +331,8 @@
 		  </tr>
 		
 		  <tr>
-		    <td><strong>b. Ingress Protection</strong><br>IP68</td>
+		    <td>b. Ingress Protection</td>
+			<td>IP68</td>
 		    <td>
 		      Protect electronics and actuation system from water ingress and pressure.<br>
 		      <em>Source:</em>
@@ -339,7 +343,8 @@
 		  </tr>
 		
 		  <tr>
-		    <td><strong>c. Buoyancy</strong><br>Neutral buoyancy at 10 m depth</td>
+		    <td>c. Buoyancy</td>
+			<td>Neutral buoyancy at 10 m depth</td>
 		    <td>
 		      Maintain stable depth without active thrusters; prevents unintentional collision with sea floor or floating to surface.
 		    </td>
@@ -350,8 +355,9 @@
 
 		  <!-- Actuation -->
 		  <tr>
-		    <td rowspan="4">4. Actuation / Locomotion</td>
-		    <td><strong>a. Actuation Pressure</strong><br>1200hPa - 1700hPa</td>
+		    <td rowspan="4">3. Actuation / Locomotion</td>
+		    <td>a. Actuation Pressure</td>
+			<td>1200hPa - 1700hPa</td>
 		    <td>
 		      Sufficient to deform silicone actuators while avoiding rupture.
 		    </td>
@@ -361,19 +367,37 @@
 		    </td>
 		  </tr>
 		  <tr>
-		    <td><strong>b. Pulse frequency</strong><br>0.125Hz - 0.09Hz(4s to 6s cycle)</td>
+		    <td>b. Pulse frequency)</td>
+			<td>0.125Hz - 0.09Hz(4s to 6s cycle)</td>
 		    <td>Silicone actuators max formation at 4s - 5s. While maximum pressure recorded at 6s.</td>
 		  </tr>
 		  <tr>
-		    <td><strong>c. Forward velocity</strong><br>>5cm/s</td>
+		    <td>c. Forward velocity</td>
+			<td>>5cm/s</td>
 		    <td>Safe, slow exploration to reduce disturbance of marine life. <br>Initial prototype (3 fingers) propel at ~5cm/s.</td>
 			<td>Track mark on tank and record time taken for Jellybot to move a certain distance.</td>
 		  </tr>
 		  <tr>
-		    <td><strong>d. Segments of fingers</strong><br>>4 , even number</td>
+		    <td>d. Segments of fingers</td>
+			<td>>4 , even number</td>
 		    <td>Symmetry reduces undesired yaw/roll during pulsing, with even weight distribution.<br>Based on a previous project, tested with 3 fingers, the structure slant sideways which shows uneven weight distribution.</td>
 			<td>Ensure Jellybot moves up and down horizontally in a straight line when all actuators are turned on.</td>
-		  </tr>	
+		  </tr>
+
+		  <!-- Power -->
+		  <tr>
+		    <td rowspan="2">4. Power & Control</td>
+		    <td>a. Power source</td>
+			<td>Tethered 12-24V, 6A power for motor.<br>~25W supply to onboard controllers</td>
+		    <td>Continuous operation; ensures sufficient and stable energy for actuation and sensors.</td>
+		    <td>Electrical stability test; measure voltage/current stability under load.</td>
+		  </tr>
+		  <tr>
+		    <td>b. Control Interface</td>
+			<td>Joystick control / Onboard microcontroller</td>
+		    <td>Intuitive human-in-the-loop control such as controlling Jellybot movement.<br>Logging of sensor data.</td>
+		    <td>Responsiveness test; verify data logging during maneuvering.</td>
+		  </tr>
 		</table>
 	</div>
   </div>
