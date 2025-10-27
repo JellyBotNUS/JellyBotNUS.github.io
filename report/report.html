@@ -291,9 +291,10 @@
 		    <th>Purposes / Rationale</th>
 		    <th>Methodology</th>
 		  </tr>
+		
 		  <!-- Depth -->
 		  <tr>
-		    <td>Depth<br><small>(Working Depth)</small></td>
+		    <td>1. Depth<br><small>(Working Depth)</small></td>
 		    <td>10 m</td>
 		    <td>
 		      Coral targets typically occur around 10 m in shallow water.<br>
@@ -305,10 +306,11 @@
 		    <td>
 		      Testing of prototype 10 m below sea level to ensure structural and component integrity.
 		    </td>
-		  </tr>	
-		  <!-- Housing Vessel main cell -->
+		  </tr>
+		
+		  <!-- Housing Vessel section -->
 		  <tr>
-		    <td rowspan="3">Housing Vessel</td>
+		    <td rowspan="3">2. Housing Vessel</td>
 		    <td><strong>a. Pressure Tolerance</strong><br>1.96 – 2 atm of pressure</td>
 		    <td>
 		      Safety protection against equipment and manufacturing tolerance.<br><br>
@@ -319,32 +321,59 @@
 		      h = 10 m<br><br>
 		      Pressure = Po + Pgh = 199.4 kPa = 1.96 atm
 		    </td>
-		    <td>
+		    <!-- Shared Methodology cell -->
+		    <td rowspan="2">
 		      Submersion test for 2+ hours at 10 m working depth.
 		    </td>
 		  </tr>
+		
 		  <tr>
 		    <td><strong>b. Ingress Protection</strong><br>IP68</td>
-		    <td colspan="2">
+		    <td>
 		      Protect electronics and actuation system from water ingress and pressure.<br>
 		      <em>Source:</em>
 		      <a href="https://integraenclosures.com/category/technical-articles/ip-rating-chart/" target="_blank">
 		        Integra Enclosures
 		      </a>
 		    </td>
-		    <td>
-		      Submersion test for 2+ hours at 10 m working depth.
-		    </td>
 		  </tr>
+		
 		  <tr>
 		    <td><strong>c. Buoyancy</strong><br>Neutral buoyancy at 10 m depth</td>
-		    <td colspan="2">
+		    <td>
 		      Maintain stable depth without active thrusters; prevents unintentional collision with sea floor or floating to surface.
 		    </td>
 		    <td>
 		      Buoyancy test in tank by adjusting internal ballast; measure rise/sink and verify stability during actuation.
 		    </td>
 		  </tr>
+
+		  <!-- Actuation -->
+		  <tr>
+		    <td rowspan="4">4. Actuation / Locomotion</td>
+		    <td><strong>a. Actuation Pressure</strong><br>1200hPa - 1700hPa</td>
+		    <td>
+		      Sufficient to deform silicone actuators while avoiding rupture.
+		    </td>
+		    <!-- Shared Methodology cell -->
+		    <td rowspan="2">
+		      Pressure cycling test of fingers; measure displacement of Jellybot per pulse
+		    </td>
+		  </tr>
+		  <tr>
+		    <td><strong>b. Pulse frequency</strong><br>0.125Hz - 0.09Hz(4s to 6s cycle)</td>
+		    <td>Silicone actuators max formation at 4s - 5s. While maximum pressure recorded at 6s.</td>
+		  </tr>
+		  <tr>
+		    <td><strong>c. Forward velocity</strong><br>>5cm/s</td>
+		    <td>Safe, slow exploration to reduce disturbance of marine life. <br>Initial prototype (3 fingers) propel at ~5cm/s.</td>
+			<td>Track mark on tank and record time taken for Jellybot to move a certain distance.</td>
+		  </tr>
+		  <tr>
+		    <td><strong>d. Segments of fingers</strong><br>>4 , even number</td>
+		    <td>Symmetry reduces undesired yaw/roll during pulsing, with even weight distribution.<br>Based on a previous project, tested with 3 fingers, the structure slant sideways which shows uneven weight distribution.</td>
+			<td>Ensure Jellybot moves up and down horizontally in a straight line when all actuators are turned on.</td>
+		  </tr>	
 		</table>
 	</div>
   </div>
