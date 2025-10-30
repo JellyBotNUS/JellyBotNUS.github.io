@@ -132,7 +132,7 @@
       <a href="#section-1">1. Overview</a>
     </sl-tree-item>
     <sl-tree-item>
-      <a href="#section-2">2. Deisgn</a>
+      <a href="#section-2">2. Design</a>
       <sl-tree-item><a href="#sub-section-2a">2.1 Application to JellyBot</a></sl-tree-item>
       <sl-tree-item><a href="#sub-section-2b">2.2 Value Proposition Statement</a></sl-tree-item>
     </sl-tree-item>
@@ -153,18 +153,103 @@
   <!-- Main Content -->
   <main>
     <section id="section-1">
-    <h2>1. Overview of the Mechanical System</h2>
+    <h2>1. Concept Generation</h2>
     <p>
-      The mechanical subsystem forms the structural backbone of Jellybot, ensuring durability, balance, and hydrodynamic efficiency.
-      Designed with precision, it houses critical components such as the propulsion system, buoyancy chamber, and sensor mounts,
-      all while maintaining waterproof integrity for extended underwater missions.
+        In the early stages of the project, inspiration was drawn from prior research on jellyfish-inspired soft robotic systems. Two notable studies—the Untethered Robot Jellyfish (New Atlas, 2019) and Jellyfish-Inspired Soft Robot Driven by Pneumatic Bistable Actuators (Wang et al., 2020)—provided valuable insights into achieving jellyfish-like propulsion through soft-bodied and pneumatic actuation mechanisms.
+        
+        From studying these examples, several important design insights were gained. Most jellyfish-inspired robots share a dome-shaped upper body coupled with a cylindrical housing that contains the electronic, power, and control systems. This configuration offers a good balance between biological resemblance, hydrodynamic efficiency, and practical integration. While structural designs remain relatively consistent, propulsion methods vary significantly—ranging from mechanical linkages and flapping fins to pneumatic or hybrid actuation systems, each with distinct trade-offs in autonomy, control, and biomimicry.
+        
+        Recognizing these design patterns, our team adopted the proven dome-and-cylinder structure to ensure both stability and efficiency in water. Building on this foundation, the next stage of the design process focused on evaluating different propulsion concepts—such as thrusters, mechanical fins, and pneumatic silicone actuators—to identify the most feasible and ecologically compatible solution for JellyBot.
     </p>
     <section id="section-2">
-    <h2>2. Structural Design and Materials</h2>
+    <h2>2. Concept Selection /h2>
     <p>
-      The Jellybot frame is constructed primarily from lightweight PVC and reinforced acrylic to provide both rigidity and corrosion resistance.
-      The shell is pressure-sealed using silicone O-rings to prevent water ingress while allowing easy disassembly for maintenance and testing.
-    </p>
+      In the development of our jellyfish-inspired soft robotic prototype, three propulsion concepts were evaluated: (A) thruster propellers, (B) mechanical linkages with fins, and (C) pneumatic silicone actuation. All concepts shared a similar structural design consisting of a cylindrical housing to contain the electronics and a dome enclosure for the camera, but differed primarily in their propulsion mechanisms.
+      
+      Concept Alternatives
+      Concept A: Thrusters/Propellers
+      Standard underwater propulsion using propellers. This method is simple, widely proven, and provides strong thrust. However, it is noisy and potentially disruptive to sensitive marine ecosystems, reducing its suitability for ecological monitoring.
+
+      Concept B: Mechanical Linkages with Fins
+      Actuation achieved through mechanical linkages driving rigid or semi-rigid fins. This approach provides directional control and higher maneuverability compared to passive soft structures. However, it introduces added complexity in waterproofing moving joints, as well as potential mechanical wear and friction issues.
+
+      Concept C: Pneumatic Silicone Actuators
+      Soft silicone tentacles actuated by pressurized air to generate pulsatile movement similar to natural jellyfish propulsion. This method is highly biomimetic, energy-efficient in low-speed cruising, and safe for marine life due to its soft interaction with the environment. It also offers quieter operation, making it more eco-friendly for coral reef monitoring.
+
+      https://github.com/JellyBotNUS/JellyBotNUS.github.io/blob/main/images/conceptselection.jpg?raw=true
+      
+      Evaluation Criteria
+      The following six criteria were selected to reflect project objectives and practical constraints:
+      
+      Biomimicry (25%) – how closely the propulsion resembles jellyfish swimming.
+      Manufacturability (20%) – ease of prototyping and fabrication.
+      Energy Efficiency (15%) – power consumption relative to endurance goals.
+      Eco-friendliness (15%) – impact on marine ecosystems (noise, turbulence, safety).
+      Control Complexity (10%) – difficulty of implementation and actuation.
+      Cost Savings (10%) – estimated material and production cost.
+    
+      Weights were applied to prioritize biomimicry and eco-friendliness, as the project’s primary goal is to develop a reef-compatible and environmentally safe surveillance platform. At the same time, manufacturability was given significant consideration to ensure the concept can be realistically prototyped and refined within the constraints of available resources, fabrication tools, and materials. By balancing innovation with practicality, the design process ensures that JellyBot remains not only functionally effective but also feasible to produce and scale for research applications. Table 1 summarizes the comparative assessment.
+
+      <table border="1" cellspacing="0" cellpadding="5">
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Selection Criteria</th>
+          <th>A: Thrusters/Propellers</th>
+          <th>B: Mechanical Linkages (Fins)</th>
+          <th>C: Pneumatic Silicone Actuators</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="6">-</td>
+          <td>Biomimicry (25%)</td>
+          <td>1</td>
+          <td>3</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Manufacturability (20%)</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Energy Efficiency (15%)</td>
+          <td>3</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Eco-friendliness (15%)</td>
+          <td>2</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Control Complexity (10%)</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Cost Savings (10%)</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Weighted Total</strong></td>
+          <td>1.80</td>
+          <td>3.00</td>
+          <td>4.20</td>
+        </tr>
+      </tbody>
+    </table>
+
+    (Pneumatic Silicone Actuation) was identified as the most suitable approach, achieving the highest weighted score of 4.20. This concept demonstrates the best overall balance across biomimicry, manufacturability, energy efficiency, and eco-friendliness, making it ideal for replicating natural jellyfish propulsion in a sustainable and cost-effective manner. While the control system and fabrication process may require moderate refinement, these challenges are outweighed by its superior biomimetic performance and low environmental impact. Additionally, the silicone-based pneumatic actuation offers excellent energy efficiency and significant cost savings compared to traditional propulsion methods, ensuring that JellyBot remains both economically viable and environmentally safe for prolonged reef monitoring operations.
+      
+    <p>
    <section id="section-3">
     <h2>3. Designs Concepts & Idealogies</h2>
     <p>
